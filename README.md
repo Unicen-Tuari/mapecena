@@ -2,7 +2,7 @@
 ========
 
 ##Tema: Maquinas Agricolas
-
+***
 ###1er Entrega
 
 * Rehacer la pagina con MVC + Bootrstrap + Smarty
