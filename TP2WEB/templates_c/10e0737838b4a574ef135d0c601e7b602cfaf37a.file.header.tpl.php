@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-16 23:34:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 04:29:41
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3079854618014ab6de1-62083610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416177255,
+      1 => 1416194549,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     
    <!--clase del registrar y loguear del index-->
     <link href="css/Inicio_registrar_loguear.css" rel="stylesheet">
-        <link href="css/Botoens_registrar.css" rel="stylesheet">
+    <link href="css/Botoens_registrar.css" rel="stylesheet">
 
 	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
     <script type='text/javascript' src="js/jquery.min.js"></script>
