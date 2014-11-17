@@ -22,15 +22,7 @@ class modeloMaquinas extends ModeloDB{
 
 	
 	public function load(){
-		// return $this->query("
-		// 	SELECT c.id_contenido AS id_Contenido,
-		// 	c.nombre AS Nombre,m.modelo AS Modelo, m.estado AS Estado, m.tipo AS Tipo, 
-		// 	c.Texto AS Texto, m.precio AS Precio, i.Ruta
-		// 	FROM maquinas m  
-		// 	INNER JOIN contenido c ON (c.id_contenido = m.id_contenido)
-		// 	INNER JOIN imagenes i ON (m.id_contenido = i.id_contenido)
-		// 	GROUP BY m.id_contenido
-		// 	");
+
 	}
 
 	public function devolverImagenes($id)	

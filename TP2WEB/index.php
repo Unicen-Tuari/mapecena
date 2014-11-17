@@ -1,9 +1,43 @@
 <?php
-// session_start();
-
-
+session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+
+
+
+
+if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
+	{
+		
+
+			// include "./controllers/IndexController.php";
+			// $controller = new IndexController();
+			// $controller->actionLogin();		
+	
+
+		
+				include_once("./controlador/ControllerUser.php");
+		$log= new ControllerUser();
+		$log->login();
+		echo ("la seccion es: ");
+		echo ($_SESSION['IDUsuario']);
+die();
+
+	}
+
+	// else if(!isset($_SESSION['user'])){
+	// 	include "./controllers/IndexController.php";
+	// 	$controller = new IndexController();
+	// 	$controller->actionLoginForm();		
+	// } 		
+	// else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='logout')
+	// {
+	// 	include "./controllers/IndexController.php";
+	// 	$controller = new IndexController();
+	// 	$controller->actionLogout();		
+	// }
+
+else
 
 if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 
@@ -68,8 +102,17 @@ if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 					include "./controlador/maquinascontrol.php";
 					$c = new maquinasControl();
 					$c->actionBusqueda($_GET['q']);
-				}
-	}else{
+			}
+	}
+
+	else if (isset($_POST['pass_registrarse']))
+		{
+			include_once("./controlador/ControllerUser.php");
+			$Registrar= new ControllerUser();
+			$Registrar->registrarse();
+
+		}
+	else{
 		echo "ERROR ACCION NO VALIDA";
 	}
 	

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-22 09:01:58
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-16 23:34:57
          compiled from ".\templates\galeria.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2923854475666cf8de9-10956441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2846654692691c9faf2-14090648%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3468a005189d737e5dabe3f8cdddcada5dd5bc41' => 
     array (
       0 => '.\\templates\\galeria.tpl',
-      1 => 1413959292,
+      1 => 1414014355,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2923854475666cf8de9-10956441',
+  'nocache_hash' => '2846654692691c9faf2-14090648',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54475666d4b3d5_30148200',
+  'unifunc' => 'content_54692691cf7873_84691826',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54475666d4b3d5_30148200')) {function content_54475666d4b3d5_30148200($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54692691cf7873_84691826')) {function content_54692691cf7873_84691826($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </div>
 </div>
@@ -33,21 +33,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/jssor.js"></script>
     <script type="text/javascript" src="./js/jssor.slider.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            var options = {
-                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
-                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-        });
-    </script>
    
 
 <div class="main_bg">
@@ -95,6 +80,6 @@ $_smarty_tpl->tpl_vars['galeriaI']->_loop = true;
 </div>
 </div>
 </div>
-
+<script type="text/javascript" src="../js/scripts.js"></script>
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

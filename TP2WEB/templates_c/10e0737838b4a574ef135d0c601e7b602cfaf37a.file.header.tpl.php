@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-22 09:50:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-16 23:34:19
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1771954475666d5efe3-63483480%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3079854618014ab6de1-62083610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1413964219,
+      1 => 1416177255,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1771954475666d5efe3-63483480',
+  'nocache_hash' => '3079854618014ab6de1-62083610',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54475666d62038_63568284',
+  'unifunc' => 'content_54618014aba4f8_07057935',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54475666d62038_63568284')) {function content_54475666d62038_63568284($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_54618014aba4f8_07057935')) {function content_54618014aba4f8_07057935($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -32,6 +32,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Medula+One' rel='stylesheet' type='text/css'>
+    
+   <!--clase del registrar y loguear del index-->
+    <link href="css/Inicio_registrar_loguear.css" rel="stylesheet">
+        <link href="css/Botoens_registrar.css" rel="stylesheet">
 
 	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
     <script type='text/javascript' src="js/jquery.min.js"></script>
@@ -42,6 +46,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </head>
 <body >
+
+
+<!-- Registracion y logueo-->
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav navbar-right">
+   <li> <a href="#" title="Click para registrarse y comenzar a utilizar la aplicacion" data-toggle="modal" data-target="#Registrarse"><i class="fa fa-sign-in fa-1x"></i>  Registrarse</a></li>
+    <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  Iniciar sesión</a></li>
+  </ul>
+  <form class="navbar-form navbar-right">
+  </form>
+</div>
+<!-- FIN Registracion y logueo-->
+
+
 
 <div class="header_bg">
 <div class="wrap">
@@ -68,12 +86,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </button>
 
         </div>
-        
+
+		<form class = "busqueda" action = "index.php">
+            <input type = "hidden" name  = "action" value = "resultado">
+
+                    <input id = "tipeoUser" name = "q">
+
+                    <button class = "btn btn-default" type = "submit" value = "Búsqueda">
+                        <i class="fa fa-search"></i>
+                        
+                    </button>
+
+        </form>
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="top-nav">
 			<div class="centrar">
+			<!-- Barra de opciones -->
 				<li><a class ="active " href="index.php?action=inicio">Inicio</a> </li>
-				<li class="arrow"><a class="hsubs " >Máquinas</a>  
+				<li class="arrow"><a class="hsubs">Máquinas</a>  
 					<ul class="subs">
 			            <li><a  href="index.php?action=nuevas">Nuevas</a></li>
 			            <li><a  href="index.php?action=usadas">Usadas</a></li>
@@ -84,23 +115,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="index.php?action=turnos">Turnos</a> </li>
 				<li><a href="index.php?action=quienessomos">Quienes somos</a></li>
 				<li><a href="index.php?action=contacto">Contacto</a> </li>
-				<li>
-					<form class = "busqueda" action = "index.php">
-		                <input type = "hidden" name  = "action" value = "resultado">
-
-		                        <input id = "tipeoUser" name = "q">
-
-		                        <button class = "btn btn-default" type = "submit" value = "Búsqueda">
-		                            <i class="fa fa-search"></i>
-		                            
-		                        </button>
-
-		            </form>
-				</li>
-
+				
+				<!-- FIN Barra de opciones -->
 			</div>	
 		</ul>
 		</div>
 	</div>
 </nav>
+
+
+
 <?php }} ?>
