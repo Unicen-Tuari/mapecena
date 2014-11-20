@@ -14,6 +14,19 @@
 </div>
 
 
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form class = "busqueda" action = "index.php">
+        <!-- <input type = "hidden" name  = "action" value = "resultado"> -->
+                <input id = "tipeoUser" name = "q">
+                <button class = "btn btn-default" type = "submit" value = "Búsqueda">
+                    <i class="fa fa-search"></i>              
+                </button>
+    </form>
+</div>
+</div>
 
 {foreach key=id_evento item=evento from=$eventos}
 <div class="maq">

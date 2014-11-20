@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-16 23:58:16
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-18 00:01:27
          compiled from ".\templates\inicio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1415354618014a5dbd0-37119659%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14fed9e69511568bdc77c5953678657044bf7d2c' => 
     array (
       0 => '.\\templates\\inicio.tpl',
-      1 => 1416178694,
+      1 => 1416261181,
       2 => 'file',
     ),
   ),
@@ -79,7 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                                           <!-- Modal Registrarse -->
 
-
+<!-- 
 
 <div class="modal fade" id="Registrarse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -162,7 +162,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -172,7 +172,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                           <!-- Modal login -->
 
 
-<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
             <div class="modal-header">
@@ -180,7 +180,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
             </div>
 
-      <div class="modal-body">
+      <div class="modal-body"> -->
 
             <!-- <form class="form-horizontal"  id="formLogin"  method="post" action="index.php">
               <fieldset>
@@ -211,7 +211,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                      <script src="./js/Ajax_login.js"></script>
                  </fieldset>
               </form> -->
-                <form method="post" action="index.php?action=login">
+                <!-- <form method="post" action="index.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username or Email"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
@@ -222,7 +222,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
   </div>
 </div>
-
+ -->
 
 
     <!-- Bootstrap core JavaScript

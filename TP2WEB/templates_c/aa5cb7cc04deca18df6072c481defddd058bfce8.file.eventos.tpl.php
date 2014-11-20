@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 04:06:23
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-19 23:21:19
          compiled from ".\templates\eventos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:319945469662f012327-33910321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aa5cb7cc04deca18df6072c481defddd058bfce8' => 
     array (
       0 => '.\\templates\\eventos.tpl',
-      1 => 1413960991,
+      1 => 1416435676,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5469662f1199d3_69243164',
   'variables' => 
   array (
     'eventos' => 0,
     'evento' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5469662f1199d3_69243164',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5469662f1199d3_69243164')) {function content_5469662f1199d3_69243164($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -41,6 +41,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 
 
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form class = "busqueda" action = "index.php">
+        <!-- <input type = "hidden" name  = "action" value = "resultado"> -->
+                <input id = "tipeoUser" name = "q">
+                <button class = "btn btn-default" type = "submit" value = "Búsqueda">
+                    <i class="fa fa-search"></i>              
+                </button>
+    </form>
+</div>
+</div>
 
 <?php  $_smarty_tpl->tpl_vars['evento'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['evento']->_loop = false;
  $_smarty_tpl->tpl_vars['id_evento'] = new Smarty_Variable;

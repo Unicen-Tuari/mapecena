@@ -7,17 +7,17 @@ Class Model_comprobar_existencia_usuario extends ModeloDB
 
 	/*******Atributos***********/
 
-	/*******Metodos***********************************/		    	
+	/*******Métodos***********************************/		    	
 	public function load(){
 		}
 
-	public function verificar_usuario($email,$pass)
+	public function verificar_usuario($usuario,$pass)
 	{	
 
 
-		return $this->query("SELECT id_persona 
+		return $this->query("SELECT id_persona, usuario, esAdmin
 							FROM usuario
-							WHERE (email = '$email') AND (password = '$pass')
+							WHERE (usuario = '$usuario') AND (password = '$pass')
 							 ");	
 	}
 }

@@ -22,6 +22,13 @@ class maquinasVista extends View	{
 		$this->smarty->display('maquinas.tpl');
 	}	
 
+	function busqueda($b){
+		
+		$this->smarty->assign("maquinas",$b);
+		$this->smarty->display('solomaquina.tpl');
+
+	}	
+
 }
 
 ?>

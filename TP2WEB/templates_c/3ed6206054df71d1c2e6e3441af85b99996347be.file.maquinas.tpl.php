@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 04:06:25
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 01:26:08
          compiled from ".\templates\maquinas.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:47795469663188c840-44751359%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3ed6206054df71d1c2e6e3441af85b99996347be' => 
     array (
       0 => '.\\templates\\maquinas.tpl',
-      1 => 1413966360,
+      1 => 1416443144,
       2 => 'file',
     ),
   ),
@@ -15,21 +15,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_54696631962db3_06183504',
   'variables' => 
   array (
     'estado' => 0,
-    'maquinas' => 0,
-    'maquina' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54696631962db3_06183504',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54696631962db3_06183504')) {function content_54696631962db3_06183504($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </div>
 </div>
 </div>
+
 
 <div class="main_bg">
 	<div class="wrap">
@@ -42,55 +41,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</div>
 </div>
 
-
-<?php  $_smarty_tpl->tpl_vars['maquina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['maquina']->_loop = false;
- $_smarty_tpl->tpl_vars['id_maquina'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['maquinas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['maquina']->key => $_smarty_tpl->tpl_vars['maquina']->value){
-$_smarty_tpl->tpl_vars['maquina']->_loop = true;
- $_smarty_tpl->tpl_vars['id_maquina']->value = $_smarty_tpl->tpl_vars['maquina']->key;
-?>
-<div class="maq">
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-
-					<img class="img-responsive foto img-rounded" src="<?php echo $_smarty_tpl->tpl_vars['maquina']->value['Ruta'];?>
-" /> 
-                	
-                	<a href="index.php?action=galeriaId&amp;id=<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
-" class="fa fa-camera-retro fa-4x iconos"></a>
-				</div>
-				<div class="col-md-1"></div>
-			</div>
-
-			<h3 class="style"><?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['Nombre']);?>
-</h3>
-			<p class="info"><?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['Texto']);?>
-</p>
-			<strong><h3 class="info">Modelo: <?php echo $_smarty_tpl->tpl_vars['maquina']->value['Modelo'];?>
-</h3>
-			<h3 class="info">Tipo: <?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['Tipo']);?>
-</h3>
-			<h3 class="info">Precio: <?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['Precio']);?>
-</h3></strong>
-
-		</div>
-		<div class="col-md-3"></div>
-	</div>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+	<form class = "busqueda" id="formBusqueda" method="POST">
+	   			<input type="text" name="inputBuscar">
+	            <button class = "btn btn-default" type = "submit" >
+	                <i class="fa fa-search"></i>              
+	            </button>
+	</form>
+</div>
 </div>
 
-<?php } ?>
+<div id="resMaquinas">
+	<?php echo $_smarty_tpl->getSubTemplate ("solomaquina.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-
-
-
+</div>
 
 
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <?php }} ?>

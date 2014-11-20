@@ -57,6 +57,7 @@ class ControllerUser
 						//le estoy pasando el id por referencia
 	public function Calendario()//datos home es informacion de una consulta 
 		{
+			echo ('calendario');
 			// echo ($_SESSION['IDUsuario']);
 			// $id_usuario=$_SESSION['IDUsuario'];
 			// $email=$_SESSION['emailUsuario'];
@@ -76,6 +77,8 @@ class ControllerUser
 	}
 
 
+
+
 	public function login()
 	{
 		
@@ -90,9 +93,11 @@ class ControllerUser
 			// include_once("./vista/View_error_login.php");
 		 //    $error=new View_error_login();
 		 //    $error->error_login();
-			
+			echo ('no se logueo');
 		}else{
 			$_SESSION['IDUsuario'] = $IdUser[0]["id_persona"];
+			$_SESSION['usuario'] = $IdUser[0]["usuario"];
+			$_SESSION['esAdmin'] = $IdUser[0]["esAdmin"];
 			// echo ($_SESSION['IDUsuario']);
 			$this->Calendario();
 
@@ -109,14 +114,14 @@ class ControllerUser
 	{
 		$arr_registro=array();
 
-		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['email_registrarse'],$_POST['pass_registrarse']);
+		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['usuario_registrarse'],$_POST['pass_registrarse']);
 		//Lograr que por ajax detecte que no se puede poner el mismo mail o usuario
 
 		if($existeUsuario == NULL)
 		{
 			
 			$pass=$_POST['pass_registrarse'];
-				
+			$arr_registro['usuario']			= strtolower ($_POST['usuario_registrarse']);	
 			$arr_registro['nombre']			= strtolower ($_POST['nombre_registrarse']);
 			$arr_registro['apellido']		= strtolower ($_POST['apellido_registrarse']);
 			$arr_registro['dni']			= strtolower ($_POST['dni_registrarse']);

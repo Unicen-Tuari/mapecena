@@ -3,21 +3,49 @@ session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+if(isset($_POST['inputBuscar'])){
 
+					include "./controlador/maquinascontrol.php";
+					$c = new maquinasControl();
+					$c->actionBusqueda();
+			// 		include "./controlador/maquinascontrol.php";
+			// 		$c = new maquinasControl();
+			// 		$c->actionBusqueda($_GET['q']);
+			
+	}else
+if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 
+		include "./controlador/indexcontrol.php";
+		$controller = new IndexControl();
+		$controller->actionIndex();		
 
-if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
+	}
+else if(isset($_POST['inputBuscar'])){
+
+					include "./controlador/maquinascontrol.php";
+					$c = new maquinasControl();
+					$c->actionBusqueda();
+			// 		include "./controlador/maquinascontrol.php";
+			// 		$c = new maquinasControl();
+			// 		$c->actionBusqueda($_GET['q']);
+			
+	}
+
+	else if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
 	{
 		
 		include_once("./controlador/ControllerUser.php");
 		$log= new ControllerUser();
+		// $log->turnovisible();
+		echo'xxxxx';
+		die('loginnnnn');
 		$log->login();
-		echo ("la seccion es: ");
+		echo ("La seccion es: ");
 		echo ($_SESSION['IDUsuario']);
+		
 
-
-	}else 	
-	if (isset($_POST['pass_registrarse']))
+	}
+	else if (isset($_POST['pass_registrarse']))
 	{
 		
 		include_once("./controlador/ControllerUser.php");
@@ -27,26 +55,27 @@ if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
 	}	
 
 	// else if(!isset($_SESSION['IDUsuario'])){
-	// 	include "./controllers/IndexController.php";
+	// 	include "./controlador/IndexController.php";
 	// 	$controller = new IndexController();
-	// 	$controller->actionLoginForm();		
+	// 	$controller->actionLoginForm();	
+		// echo ($_SESSION['usuario']);
+		// echo('NO ESTA LOGUEADO');
 	// } 		
 	// else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='logout')
 	// {
-	// 	include "./controllers/IndexController.php";
-	// 	$controller = new IndexController();
-	// 	$controller->actionLogout();		
+		// 	include "./controlador/IndexController.php";
+		// $controller = new IndexController();
+		// $controller->actionLogout();	
+	// 	echo('DESLOGUEO');
+	// 	session_start();
+	// 	session_destroy();
 	// }
 
-else
 
-if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 
-		include "./controlador/indexcontrol.php";
-		$controller = new IndexControl();
-		$controller->actionIndex();		
+	
 
-	}else if($_REQUEST['action']=='quienessomos'){
+	else if($_REQUEST['action']=='quienessomos'){
 
 		include "./controlador/aboutcontrol.php";
 		$c = new aboutControl();
@@ -97,25 +126,12 @@ if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 				$c = new galeriaControl();
 				$c->soloImagenesDe($_GET['id']);									
 			}
-	}else if($_REQUEST['action']=='resultado'){
-				if(array_key_exists('q', $_GET)){
-					
-					include "./controlador/maquinascontrol.php";
-					$c = new maquinasControl();
-					$c->actionBusqueda($_GET['q']);
-			}
 	}
-
-	// else if (isset($_POST['pass_registrarse']))
-	// 	{
-	// 		include_once("./controlador/ControllerUser.php");
-	// 		$Registrar= new ControllerUser();
-	// 		$Registrar->registrarse();
-
-	// 	}
 	else{
 		echo "ERROR ACCION NO VALIDA";
 	}
 	
+
+
 		
 ?>

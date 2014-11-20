@@ -19,17 +19,13 @@ class maquinasControl{
 		
 	}
 	
-	public function actionBusqueda($q){
-
+	public function actionBusqueda(){
+      
 		$maquinasQ = new modeloMaquinas();
-		$view = new maquinasvista;
-		
-		$MaqQ = $maquinasQ->busqueda($q);		 	 
-		
-		$view->set_maquina($MaqQ," ");
-		
-		
-		$view->render();
+		$vistamaquina = new maquinasvista();
+		$busquedaRealizada = $_POST['inputBuscar'];
+		$MaqQ = $maquinasQ->busqueda($busquedaRealizada);	 	 
+		$vistamaquina->busqueda($MaqQ);
 
 	}
 	

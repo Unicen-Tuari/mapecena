@@ -57,7 +57,7 @@
 
                                           <!-- Modal Registrarse -->
 
-
+<!-- 
 
 <div class="modal fade" id="Registrarse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -140,7 +140,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -150,7 +150,7 @@
                                           <!-- Modal login -->
 
 
-<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
             <div class="modal-header">
@@ -158,7 +158,7 @@
               <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
             </div>
 
-      <div class="modal-body">
+      <div class="modal-body"> -->
 
             <!-- <form class="form-horizontal"  id="formLogin"  method="post" action="index.php">
               <fieldset>
@@ -188,7 +188,7 @@
                      <script src="./js/Ajax_login.js"></script>
                  </fieldset>
               </form> -->
-                <form method="post" action="index.php?action=login">
+                <!-- <form method="post" action="index.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username or Email"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
@@ -199,7 +199,7 @@
     </div>
   </div>
 </div>
-
+ -->
 
 
     <!-- Bootstrap core JavaScript

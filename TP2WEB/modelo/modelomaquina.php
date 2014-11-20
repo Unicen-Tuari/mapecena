@@ -39,7 +39,7 @@ class modeloMaquinas extends ModeloDB{
 	{	
 		return $this->query("
 			SELECT c.id_contenido as id_Contenido,  c.nombre as Nombre, c.texto as Texto, 
-			m.modelo as Modelo, m.tipo as Tipo, m.precio as Precio, m.id_contenido, i.Ruta, m.estado
+			m.modelo as Modelo, m.tipo as Tipo, m.precio as Precio, m.id_contenido, i.Ruta, m.estado as Estado
 			FROM contenido c
 			INNER JOIN maquinas m ON (c.id_contenido = m.id_contenido)
 			LEFT JOIN imagenes i ON (c.id_contenido = i.id_contenido)

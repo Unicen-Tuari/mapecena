@@ -9,35 +9,37 @@ class model_registrarse extends modelodb
 	public function load(){
 		}
 
-	public function registrar($Reclamo_ingresado)
+	public function registrar($Registro)
 		{
-
-			$nombre			=	$Reclamo_ingresado["nombre"];
-			$apellido		=	$Reclamo_ingresado["apellido"];
-			$dni			=	$Reclamo_ingresado["dni"];
-			$email			=	$Reclamo_ingresado["email"];
-			$Celular		=	$Reclamo_ingresado["Celular"];
-			$fecha_nacimiento=	date("y/m/d");//$Reclamo_ingresado["fecha_nacimiento"];
-			$Telefono_fijo	=	$Reclamo_ingresado["Telefono_fijo"];
-			$pass			=	$Reclamo_ingresado["pass"];
-			$direccion		=	$Reclamo_ingresado["direccion"];
+			$usuario		=	$Registro["usuario"];
+			$nombre			=	$Registro["nombre"];
+			$apellido		=	$Registro["apellido"];
+			$dni			=	$Registro["dni"];
+			$email			=	$Registro["email"];
+			$Celular		=	$Registro["Celular"];
+			$fecha_nacimiento=	date("y/m/d");
+			$Telefono_fijo	=	$Registro["Telefono_fijo"];
+			$pass			=	$Registro["pass"];
+			$direccion		=	$Registro["direccion"];
 			$fecha_registro	=	date("y/m/d");
 
 
 			// El id_persona debe incrementarse solo
 			$sql = "INSERT INTO USUARIO(
-					 nombre				,
-					 apellido			,
-					 dni_persona		,
-					 fecha_nacimiento	,
-					 direccion			,
-					 celular			,
-					 telefono_fijo		, 
-					 email				, 
-					 password			,
-					 fecha_registro
-					 )
+					usuario 			,					
+					nombre				,
+					apellido			,
+					dni_persona			,
+					fecha_nacimiento	,
+					direccion			,
+					celular				,
+					telefono_fijo		, 
+					email				, 
+					password			,
+					fecha_registro
+					)
 			VALUES( 
+					:usuario 			,
 					:nombre				, 
 					:apellido			,				
 					:dni_persona		,
@@ -56,7 +58,8 @@ class model_registrarse extends modelodb
 
 			$preparado->execute(
 								array
-									(														
+									(		
+										':usuario'				=>$usuario				,											
 										':nombre'				=>$nombre				, 
 										':apellido'				=>$apellido				,				
 										':dni_persona'			=>$dni					,
