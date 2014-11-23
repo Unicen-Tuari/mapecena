@@ -116,31 +116,26 @@
         <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
       </div>
       <div class="modal-body">
-       <form class="form-horizontal"  action="index.php" method="post">
+       <form class="form-horizontal"  action="index.php" method="POST">
         <fieldset>
             <legend>Ingrese todo los datos requeridos.</legend>
+              
               <div class="form-group">
-                  <label for="inputUsuario" class="col-lg-2 control-label" required>Usuario</label>
+                  <label for="inputNombre" class="col-lg-2 control-label" >Nombres</label>
                   <div class="col-lg-10">
-                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
+                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre"  >
                   </div>
               </div>
               <div class="form-group">
-                  <label for="inputNombre" class="col-lg-2 control-label" required>Nombres</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre" placeholder="" required>
-                  </div>
-              </div>
-              <div class="form-group">
-                <label for="apellido" class="col-lg-2 control-label" required>Apellido</label>
+                <label for="apellido" class="col-lg-2 control-label" >Apellido</label>
                 <div class="col-lg-10">
-                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido" placeholder="" required>
+                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido"  >
                 </div>
               </div>
               <div class="form-group">
                   <label for="inputDocumento" class="col-lg-2 control-label">Documento</label>
                   <div class="col-lg-10">
-                    <input type="text" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" required>
+                    <input type="integer" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" >
                   </div>
               </div>
               <div class="form-group">
@@ -152,14 +147,14 @@
               <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
                     <div class="col-lg-10">
-                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com"  required>
+                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com" >
                     </div>
               </div>
               <div class="form-group">
                     <label for="inputCelular" class="col-lg-2 control-label">Teléfono 
                     celular</label>
                     <div class="col-lg-10">
-                      <input type="integer" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
+                      <input type="tel" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
                     </div>
                </div>
               <div class="form-group">
@@ -172,10 +167,15 @@
               <div class="form-group">
                 <label for="text" class="col-lg-2 control-label">Dirección</label>
                      <div class="col-lg-10">
-                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputEmail" placeholder="Direccion" required>
+                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputDireccion" placeholder="Direccion" >
                     </div>
               </div>
-
+              <div class="form-group">
+                  <label for="inputUsuario" class="col-lg-2 control-label" >Usuario</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
+                  </div>
+              </div>
               <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                    <div class="col-lg-10">

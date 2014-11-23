@@ -8,6 +8,11 @@ class contactoVista extends View	{
 		$this->smarty->display('contacto.tpl');
 	}
 	
+	function renderContacto($arrComentario){
+		$this->smarty->assign("contacto",$arrComentario);
+		$this->smarty->display('contacto.tpl');
+
+	}
 }
 
 ?>

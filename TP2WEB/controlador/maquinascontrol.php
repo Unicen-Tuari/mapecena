@@ -8,11 +8,13 @@ class maquinasControl{
 
 		$descripcion = new modeloMaquinas();
 		$vistamaquina = new maquinasvista();
-		if ($estado == 'nuevas')
-			$est = 'N';
-		else
-			$est = 'U';
-		$datos = $descripcion->devolverDescripcion($est);
+		// if ($estado == 'NUEVA')
+		// 	$est = 'N';
+		// else
+		// 	$est = 'U';
+		// echo($estado);
+		// $datos = $descripcion->devolverDescripcion($est);
+		$datos = $descripcion->devolverDescripcion($estado);
 		
 		$vistamaquina->set_maquina($datos,$estado);
 		$vistamaquina->render();

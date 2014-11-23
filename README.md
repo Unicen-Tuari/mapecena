@@ -21,3 +21,8 @@
 * Login
 * Test Drive Maquinaria
 * Un usuario logueado, hace click en Test Drive de una máquina y se guarda en la base de datos y se le manda un mail al administrador.
+
+###Cerrar issues
+Sintaxis:
+
+*git commit -m "Closes #1, closes #2, closes #3, closes #n; mensaje del commit ."

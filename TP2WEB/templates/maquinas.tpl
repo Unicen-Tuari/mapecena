@@ -8,7 +8,8 @@
 	<div class="wrap">
 		<div class="wrapper">
 			<div class="main">
-				<h2 class="style">Máquinas {$estado}</h2>
+				<!-- <h2 class="style">Máquinas {$estado}</h2> -->
+				<h2 class="style">Máquinas</h2>
 			</div>
 		</div>
 	</div>

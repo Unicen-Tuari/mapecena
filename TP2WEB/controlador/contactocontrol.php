@@ -1,11 +1,21 @@
 <?php
-
+include "./modelo/modelocontacto.php";
+include "./vista/contactovista.php";
 class contactoControl{
 	
 	public function actionControl(){
-		include "./vista/contactovista.php";
+		
 		$view = new contactoVista;
 		$view->render();
+	}
+
+	public function insertarComentario($nombre,$apellido,$email,$tel,$comentario){
+		
+		$contacto = new modeloContacto;
+		$view = new contactoVista;
+		$arrContacto = $contacto->nuevoComentario($nombre,$apellido,$email,$tel,$comentario);
+		$view->renderContacto($arrContacto);
+
 	}
 	
 }

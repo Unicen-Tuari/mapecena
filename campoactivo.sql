@@ -22982,7 +22982,8 @@ INSERT INTO `ciudad` (`id`, `ciudad_nombre`, `cp`, `provincia_id`) VALUES
 (27854,	'SABBI',	7303,	1),
 (27855,	'COSTA DEL TOBA',	3553,	21),
 (27856,	'CANDELARIA',	4231,	3),
-(27857,	'LAS VEGAS',	5549,	13);
+(27857,	'LAS VEGAS',	5549,	13)
+ON DUPLICATE KEY UPDATE `id` = VALUES(`id`), `ciudad_nombre` = VALUES(`ciudad_nombre`), `cp` = VALUES(`cp`), `provincia_id` = VALUES(`provincia_id`);
 
 DROP TABLE IF EXISTS `contactos`;
 CREATE TABLE `contactos` (
@@ -22990,14 +22991,15 @@ CREATE TABLE `contactos` (
   `Nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `Apellido` varchar(250) COLLATE utf8_spanish_ci NOT NULL DEFAULT '',
   `Telefono` varchar(250) COLLATE utf8_spanish_ci NOT NULL DEFAULT '0',
-  `Correoelectronico` varchar(250) COLLATE utf8_spanish_ci NOT NULL DEFAULT '',
-  `Cometario` longtext COLLATE utf8_spanish_ci NOT NULL,
+  `Email` varchar(250) COLLATE utf8_spanish_ci NOT NULL DEFAULT '',
+  `Comentario` longtext COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-INSERT INTO `contactos` (`id`, `Nombre`, `Apellido`, `Telefono`, `Correoelectronico`, `Cometario`) VALUES
+INSERT INTO `contactos` (`id`, `Nombre`, `Apellido`, `Telefono`, `Email`, `Comentario`) VALUES
 (1,	'Matias',	'Apecena',	'00000000001',	'matiasapecena@yahoo.com',	''),
-(2,	'nacho',	'profe',	'1234',	'msmms@gmail.com',	'prueba');
+(2,	'nacho',	'profe',	'1234',	'msmms@gmail.com',	'prueba')
+ON DUPLICATE KEY UPDATE `id` = VALUES(`id`), `Nombre` = VALUES(`Nombre`), `Apellido` = VALUES(`Apellido`), `Telefono` = VALUES(`Telefono`), `Email` = VALUES(`Email`), `Comentario` = VALUES(`Comentario`);
 
 DROP TABLE IF EXISTS `contenido`;
 CREATE TABLE `contenido` (
@@ -23005,7 +23007,7 @@ CREATE TABLE `contenido` (
   `nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `texto` longtext COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_contenido`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `contenido` (`id_contenido`, `nombre`, `texto`) VALUES
 (1,	'FR600',	'0Km, 4WD, Motor FPT Cursor 13 Tier III, 6 cilindros en línea, 544 cv de potencia nominal hasta 600 cv de potencia máxima, tanque de combustible de 1.220 lts, de capacidad, transmisión hidrostática con traba de diferencial, velocidad máxima en carretera de 40 km. a 1400 rpm, detección de metal con indicador de posición.\r\nCabezal de 6 mts. 8-70.'),
@@ -23021,7 +23023,10 @@ INSERT INTO `contenido` (`id_contenido`, `nombre`, `texto`) VALUES
 (11,	'Segadora Acondicionadora 1411',	'3,16 mts de trabajo, rodillos acondicionadores de goma Chevron, lanza curva hidráulica, tdf 540 rpm, año 2006. Muy buena.'),
 (12,	'12° Fiesta del Chacarer&oacute;',	'Estuvimos presentes en la Fiesta del Chacarero que se realizó en Chillar.'),
 (13,	'Agroactiva 2014',	'Agroactiva, la exposición anual de productores agropecuarios, empresas fabricantes de maquinarias e insumos, celebra este años sus primeros 20 años.\r\nLa muestra agropecuaria a campo abierto más grande del mundo que se desarrolla en Argentina del 4 al 7 de junio de 2014, en ruta nacional Nº 9 kilómetro 386, Cañada de Gómez, Santa Fe.'),
-(14,	'Fiesta de la Cebolla 2014',	'El segundo carretón partió hoy para la ciudad de Hilario Ascasubi con cinco unidades para la expo. Los esperamos en nuestro stand desde el 11 al 14!!!!.');
+(14,	'Fiesta de la Cebolla 2014',	'El segundo carretón partió hoy para la ciudad de Hilario Ascasubi con cinco unidades para la expo. Los esperamos en nuestro stand desde el 11 al 14!!!!.'),
+(15,	'q',	'q'),
+(16,	'q',	'q')
+ON DUPLICATE KEY UPDATE `id_contenido` = VALUES(`id_contenido`), `nombre` = VALUES(`nombre`), `texto` = VALUES(`texto`);
 
 DROP TABLE IF EXISTS `evento`;
 CREATE TABLE `evento` (
@@ -23035,7 +23040,8 @@ CREATE TABLE `evento` (
 INSERT INTO `evento` (`id_contenido`, `fecha`, `ubicacion`) VALUES
 (12,	'2014-03-21',	'Chillar'),
 (13,	'2014-06-08',	'Cañada de Gómez'),
-(14,	'2014-04-11',	'Hilario Ascasubi');
+(14,	'2014-04-11',	'Hilario Ascasubi')
+ON DUPLICATE KEY UPDATE `id_contenido` = VALUES(`id_contenido`), `fecha` = VALUES(`fecha`), `ubicacion` = VALUES(`ubicacion`);
 
 DROP TABLE IF EXISTS `imagenes`;
 CREATE TABLE `imagenes` (
@@ -23045,7 +23051,7 @@ CREATE TABLE `imagenes` (
   PRIMARY KEY (`id_imagen`),
   KEY `id_contenido` (`id_contenido`),
   CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`id_contenido`) REFERENCES `contenido` (`id_contenido`)
-) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=167 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `imagenes` (`id_imagen`, `id_contenido`, `ruta`) VALUES
 (1,	1,	'images/Nuevos/FR600/FR600_001.jpg'),
@@ -23206,12 +23212,15 @@ INSERT INTO `imagenes` (`id_imagen`, `id_contenido`, `ruta`) VALUES
 (161,	14,	'images/Eventos/FiestadelaCebolla2014/FiestadelaCebolla2014_028.jpg'),
 (162,	14,	'images/Eventos/FiestadelaCebolla2014/FiestadelaCebolla2014_029.jpg'),
 (163,	14,	'images/Eventos/FiestadelaCebolla2014/FiestadelaCebolla2014_030.jpg'),
-(164,	14,	'images/Eventos/FiestadelaCebolla2014/FiestadelaCebolla2014_031.jpg');
+(164,	14,	'images/Eventos/FiestadelaCebolla2014/FiestadelaCebolla2014_031.jpg'),
+(165,	15,	'q'),
+(166,	16,	'q')
+ON DUPLICATE KEY UPDATE `id_imagen` = VALUES(`id_imagen`), `id_contenido` = VALUES(`id_contenido`), `ruta` = VALUES(`ruta`);
 
 DROP TABLE IF EXISTS `maquinas`;
 CREATE TABLE `maquinas` (
   `id_contenido` int(11) NOT NULL,
-  `estado` char(1) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'N',
+  `estado` varchar(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'N',
   `modelo` int(11) NOT NULL DEFAULT '0',
   `tipo` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `precio` int(11) NOT NULL,
@@ -23220,17 +23229,18 @@ CREATE TABLE `maquinas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `maquinas` (`id_contenido`, `estado`, `modelo`, `tipo`, `precio`) VALUES
-(1,	'N',	2013,	'picadora',	215000),
-(2,	'N',	2014,	'tractor',	177000),
-(3,	'N',	2014,	'tractor',	82000),
-(4,	'U',	2009,	'tractor',	140000),
-(5,	'U',	2004,	'tractor',	18200),
-(6,	'U',	2004,	'sembradora',	28000),
-(7,	'U',	2003,	'pulverizador',	75000),
-(8,	'U',	1996,	'tractor',	30000),
-(9,	'U',	1997,	'picadora',	27000),
-(10,	'U',	2006,	'tractor',	30000),
-(11,	'U',	2006,	'segadora',	16000);
+(1,	'NUEVA',	2013,	'picadora',	215000),
+(2,	'NUEVA',	2014,	'tractor',	177000),
+(3,	'NUEVA',	2014,	'tractor',	82000),
+(4,	'USADA',	2009,	'tractor',	140000),
+(5,	'USADA',	2004,	'tractor',	18200),
+(6,	'USADA',	2004,	'sembradora',	28000),
+(7,	'USADA',	2003,	'pulverizador',	75000),
+(8,	'USADA',	1996,	'tractor',	30000),
+(9,	'USADA',	1997,	'picadora',	27000),
+(10,	'USADA',	2006,	'tractor',	30000),
+(11,	'USADA',	2006,	'segadora',	16000)
+ON DUPLICATE KEY UPDATE `id_contenido` = VALUES(`id_contenido`), `estado` = VALUES(`estado`), `modelo` = VALUES(`modelo`), `tipo` = VALUES(`tipo`), `precio` = VALUES(`precio`);
 
 DROP TABLE IF EXISTS `provincia`;
 CREATE TABLE `provincia` (
@@ -23263,15 +23273,16 @@ INSERT INTO `provincia` (`id`, `provincia_nombre`) VALUES
 (21,	'Santa Fé'),
 (22,	'Santiago del Estero'),
 (23,	'Tierra del Fuego'),
-(24,	'Tucumán');
+(24,	'Tucumán')
+ON DUPLICATE KEY UPDATE `id` = VALUES(`id`), `provincia_nombre` = VALUES(`provincia_nombre`);
 
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
-  `id_persona` int(11) NOT NULL AUTO_INCREMENT,
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
   `Usuario` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
   `apellido` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `dni_persona` int(11) NOT NULL,
+  `dni` int(11) NOT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
   `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `celular` int(11) NOT NULL,
@@ -23280,13 +23291,12 @@ CREATE TABLE `usuario` (
   `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `fecha_registro` date NOT NULL,
   `esAdmin` bit(1) NOT NULL DEFAULT b'0',
-  PRIMARY KEY (`id_persona`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-INSERT INTO `usuario` (`id_persona`, `Usuario`, `nombre`, `apellido`, `dni_persona`, `fecha_nacimiento`, `email`, `celular`, `telefono_fijo`, `direccion`, `password`, `fecha_registro`, `esAdmin`) VALUES
+INSERT INTO `usuario` (`idUsuario`, `Usuario`, `nombre`, `apellido`, `dni`, `fecha_nacimiento`, `email`, `celular`, `telefono_fijo`, `direccion`, `password`, `fecha_registro`, `esAdmin`) VALUES
 (1,	'fran',	'Franco',	'Aller',	227417278,	'2001-07-22',	'franco.e.aller@gmail.com',	2147483647,	0,	'4 de Abril',	'fran',	'2020-07-22',	CONV('0', 2, 10) + 0),
-(2,	'apecena',	'matias',	'apecena',	0,	'2014-11-12',	'matiasapecena@yahoo.com',	1,	1,	'Costa Rica 146 E 5',	'micaela79',	'2014-11-12',	CONV('1', 2, 10) + 0),
-(11,	'roberto',	'carlos ',	'mangieri',	23,	'2014-11-18',	'pepeq@a.com',	0,	0,	'matiasapecena@yahoo.com',	'loquito',	'2014-11-18',	CONV('0', 2, 10) + 0),
-(12,	'pedro',	's',	's',	0,	'2014-11-18',	'sssss@a.com',	0,	0,	'matiasapecena@yahoo.com',	'loquito',	'2014-11-18',	CONV('0', 2, 10) + 0);
+(2,	'apecena',	'matias',	'apecena',	0,	'2014-11-12',	'matiasapecena@yahoo.com',	1,	1,	'Costa Rica 146 E 5',	'micaela79',	'2014-11-12',	CONV('1', 2, 10) + 0)
+ON DUPLICATE KEY UPDATE `idUsuario` = VALUES(`idUsuario`), `Usuario` = VALUES(`Usuario`), `nombre` = VALUES(`nombre`), `apellido` = VALUES(`apellido`), `dni` = VALUES(`dni`), `fecha_nacimiento` = VALUES(`fecha_nacimiento`), `email` = VALUES(`email`), `celular` = VALUES(`celular`), `telefono_fijo` = VALUES(`telefono_fijo`), `direccion` = VALUES(`direccion`), `password` = VALUES(`password`), `fecha_registro` = VALUES(`fecha_registro`), `esAdmin` = VALUES(`esAdmin`);
 
--- 2014-11-20 02:37:26
+-- 2014-11-23 14:36:08

@@ -12,7 +12,7 @@ class model_ver_reclamos extends modelodb
 
 						return $this->query("SELECT *
 						 					FROM RECLAMO 
-						 					where id_persona='$id_usuario'
+						 					where idUsuario='$id_usuario'
 						 					AND sector_raiz is not null"
 						 					 );
 
@@ -23,7 +23,7 @@ class model_ver_reclamos extends modelodb
 						
 						return $this->query("SELECT *
 						 					FROM RECLAMO 
-						 					where id_persona='$id_usuario'
+						 					where idUsuario='$id_usuario'
 						 					AND   id_reclamo='$id_reclamo'	
 						 					" );
 
@@ -35,7 +35,7 @@ class model_ver_reclamos extends modelodb
 			{
 			$r_f= $this->query("SELECT count(id_reclamo)
 									FROM RECLAMO
-									WHERE id_persona='$id_usuario'
+									WHERE idUsuario='$id_usuario'
 								 	AND estado_reclamo='Finalizado'");
 				return $r_f[0]["count(id_reclamo)"];
 			}
@@ -45,7 +45,7 @@ class model_ver_reclamos extends modelodb
 			{
 				$r_p= $this->query("SELECT count(id_reclamo)
 									FROM RECLAMO
-									WHERE id_persona='$id_usuario'
+									WHERE idUsuario='$id_usuario'
 								 	AND estado_reclamo='No visto'");
 				return $r_p[0]["count(id_reclamo)"];
 			
@@ -91,7 +91,7 @@ class model_crear_reclamo extends modelodb
 			$reclamo=$Rec;
 
 			$this->query(
-					"INSERT INTO RECLAMO( id_persona, id_sector, id_empleado, sector_raiz, fecha, areas_que_ya_ha_pasado, estado_reclamo, reclamo,foto_reclamo) 
+					"INSERT INTO RECLAMO( idUsuario, id_sector, id_empleado, sector_raiz, fecha, areas_que_ya_ha_pasado, estado_reclamo, reclamo,foto_reclamo) 
 					VALUES( '$id_pers', $sector_seleccionado, null, '$sector_seleccionado','$fecha',2,'No visto','$reclamo','$foto_del_reclamo')");
 
 

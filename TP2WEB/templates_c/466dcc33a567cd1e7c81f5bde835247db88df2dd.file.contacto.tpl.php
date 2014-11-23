@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 22:51:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-21 00:18:45
          compiled from ".\templates\contacto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16261546a6df8715996-45678773%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32726546e6e4f3c1530-20897288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '466dcc33a567cd1e7c81f5bde835247db88df2dd' => 
     array (
       0 => '.\\templates\\contacto.tpl',
-      1 => 1413930061,
+      1 => 1416525513,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16261546a6df8715996-45678773',
+  'nocache_hash' => '32726546e6e4f3c1530-20897288',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_546a6df87aceb7_81950064',
+  'unifunc' => 'content_546e6e4f421a50_00536496',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_546a6df87aceb7_81950064')) {function content_546a6df87aceb7_81950064($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_546e6e4f421a50_00536496')) {function content_546e6e4f421a50_00536496($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </div>
 </div>
@@ -52,22 +52,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col span_2_of_4">
 				  <div class="contact-form">
 				  	<h2 class="style">Contactanos</h2>
-					       <form method="post" action="#">
+					       <form method="POST" action="index.php?action=contacto">
 					    	<div>
 						    	<span><label>Nombre</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
+						    	<span><input name="nombre" type="text" class="textbox" required></span>
+						    </div>
+						    <div>
+						    	<span><label>Apellido</label></span>
+						    	<span><input name="apellido" type="text" class="textbox" required></span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    	<span><input name="email" type="email" class="textbox" required></span>
 						    </div>
 						    <div>
 						     	<span><label>Nro Telefónico</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    	<span><input name="tel" type="integer" class="textbox" ></span>
 						    </div>
 						    <div>
 						    	<span><label>Comentarios/Sugerencias</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+						    	<span><textarea name="comentario" required> </textarea></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" value="Enviar"></span>

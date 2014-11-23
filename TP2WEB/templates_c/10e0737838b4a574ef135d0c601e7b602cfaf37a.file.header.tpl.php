@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-19 23:08:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 04:55:11
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3079854618014ab6de1-62083610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:21079546e6e4f46ab45-25734718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416434812,
+      1 => 1416714426,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3079854618014ab6de1-62083610',
+  'nocache_hash' => '21079546e6e4f46ab45-25734718',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54618014aba4f8_07057935',
+  'unifunc' => 'content_546e6e4f479393_90919444',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54618014aba4f8_07057935')) {function content_54618014aba4f8_07057935($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_546e6e4f479393_90919444')) {function content_546e6e4f479393_90919444($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
   <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -137,31 +137,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
       </div>
       <div class="modal-body">
-       <form class="form-horizontal"  action="index.php" method="post">
+       <form class="form-horizontal"  action="index.php" method="POST">
         <fieldset>
             <legend>Ingrese todo los datos requeridos.</legend>
+              
               <div class="form-group">
-                  <label for="inputUsuario" class="col-lg-2 control-label" required>Usuario</label>
+                  <label for="inputNombre" class="col-lg-2 control-label" >Nombres</label>
                   <div class="col-lg-10">
-                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
+                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre"  >
                   </div>
               </div>
               <div class="form-group">
-                  <label for="inputNombre" class="col-lg-2 control-label" required>Nombres</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre" placeholder="" required>
-                  </div>
-              </div>
-              <div class="form-group">
-                <label for="apellido" class="col-lg-2 control-label" required>Apellido</label>
+                <label for="apellido" class="col-lg-2 control-label" >Apellido</label>
                 <div class="col-lg-10">
-                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido" placeholder="" required>
+                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido"  >
                 </div>
               </div>
               <div class="form-group">
                   <label for="inputDocumento" class="col-lg-2 control-label">Documento</label>
                   <div class="col-lg-10">
-                    <input type="text" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" required>
+                    <input type="integer" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" >
                   </div>
               </div>
               <div class="form-group">
@@ -173,14 +168,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
                     <div class="col-lg-10">
-                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com"  required>
+                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com" >
                     </div>
               </div>
               <div class="form-group">
                     <label for="inputCelular" class="col-lg-2 control-label">Teléfono 
                     celular</label>
                     <div class="col-lg-10">
-                      <input type="integer" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
+                      <input type="tel" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
                     </div>
                </div>
               <div class="form-group">
@@ -193,10 +188,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="form-group">
                 <label for="text" class="col-lg-2 control-label">Dirección</label>
                      <div class="col-lg-10">
-                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputEmail" placeholder="Direccion" required>
+                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputDireccion" placeholder="Direccion" >
                     </div>
               </div>
-
+              <div class="form-group">
+                  <label for="inputUsuario" class="col-lg-2 control-label" >Usuario</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
+                  </div>
+              </div>
               <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                    <div class="col-lg-10">

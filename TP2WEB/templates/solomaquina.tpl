@@ -22,11 +22,12 @@
 			<strong><h3 class="info">Modelo: {$maquina['Modelo']}</h3>
 			<h3 class="info">Tipo: {utf8_encode($maquina['Tipo'])}</h3>
 			<h3 class="info">Precio: {utf8_encode($maquina['Precio'])}</h3></strong>
-			<h3 class="info">Estado: {	if ($maquina['Estado'] == N)
-											utf8_encode("NUEVA");
-										else
-											utf8_encode("USADA");}</h3></strong>
-
+			<h3 class="info">Estado: {utf8_encode($maquina['Estado'])}</h3></strong>
+			<!-- {if ($maquina['Estado'] eq 'U')}
+				<h3 class="info">Estado: USADA</h3></strong>
+			{else}
+				<h3 class="info">Estado: NUEVA</h3></strong>
+			{/if} -->
 		</div>
 		<div class="col-md-3"></div>
 	</div>

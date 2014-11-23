@@ -3,16 +3,32 @@ session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-if(isset($_POST['inputBuscar'])){
 
-					include "./controlador/maquinascontrol.php";
-					$c = new maquinasControl();
-					$c->actionBusqueda();
-			// 		include "./controlador/maquinascontrol.php";
-			// 		$c = new maquinasControl();
-			// 		$c->actionBusqueda($_GET['q']);
+
+if(!isset($_SESSION['IDUsuario']))
+	echo('DESLOGUEADO ');
+if(isset($_SESSION['IDUsuario']))
+	echo('Logueado ');
+
+if (isset($_POST['pass_registrarse']))
+	{
+
+		include_once("./controlador/ControllerUser.php");
+		$Registrar= new ControllerUser();
+		$Registrar->registrarse();
+
+	}
+else if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
+	{
+		
+		include_once("./controlador/ControllerUser.php");
+		$log= new ControllerUser();
 			
-	}else
+		echo ("La seccion es: ");
+		echo ($_SESSION['IDUsuario']);
+		$log->login();	
+		
+	}
 if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 
 		include "./controlador/indexcontrol.php";
@@ -20,39 +36,11 @@ if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 		$controller->actionIndex();		
 
 	}
-else if(isset($_POST['inputBuscar'])){
 
-					include "./controlador/maquinascontrol.php";
-					$c = new maquinasControl();
-					$c->actionBusqueda();
-			// 		include "./controlador/maquinascontrol.php";
-			// 		$c = new maquinasControl();
-			// 		$c->actionBusqueda($_GET['q']);
-			
-	}
 
-	else if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
-	{
+
+
 		
-		include_once("./controlador/ControllerUser.php");
-		$log= new ControllerUser();
-		// $log->turnovisible();
-		echo'xxxxx';
-		die('loginnnnn');
-		$log->login();
-		echo ("La seccion es: ");
-		echo ($_SESSION['IDUsuario']);
-		
-
-	}
-	else if (isset($_POST['pass_registrarse']))
-	{
-		
-		include_once("./controlador/ControllerUser.php");
-		$Registrar= new ControllerUser();
-		$Registrar->registrarse();
-
-	}	
 
 	// else if(!isset($_SESSION['IDUsuario'])){
 	// 	include "./controlador/IndexController.php";
@@ -71,8 +59,6 @@ else if(isset($_POST['inputBuscar'])){
 	// 	session_destroy();
 	// }
 
-
-
 	
 
 	else if($_REQUEST['action']=='quienessomos'){
@@ -82,11 +68,17 @@ else if(isset($_POST['inputBuscar'])){
 		$c->actionAbout();
 
 	}else if($_REQUEST['action']=='contacto'){
+		if ((array_key_exists('nombre',$_POST))&&(array_key_exists('apellido',$_POST))&&(array_key_exists('email',$_POST))
+			&&(array_key_exists('tel',$_POST))&&(array_key_exists('comentario',$_POST))){
+			include "./controlador/contactocontrol.php";
+			$c = new contactoControl();
+			$c->insertarComentario($_POST['nombre'],$_POST['apellido'],$_POST['email'],$_POST['tel'],$_POST['comentario']);
 
+	}else{
 			include "./controlador/contactocontrol.php";
 			$c = new contactoControl();
 			$c->actionControl();
-
+		}
 	}else if($_REQUEST['action']=='eventos'){
 	
 		include "./controlador/eventoscontrol.php";
@@ -98,14 +90,14 @@ else if(isset($_POST['inputBuscar'])){
 
 		include "./controlador/maquinascontrol.php";
 		$c = new maquinasControl();
-		$c->actionMaquinas('nuevas');
+		$c->actionMaquinas('NUEVA');
 				
 	
 	}else if($_REQUEST['action']=='usadas'){
 
 			include "./controlador/maquinascontrol.php";
 			$c = new maquinasControl();
-			$c->actionMaquinas('usadas');
+			$c->actionMaquinas('USADA');
 
 	}else if($_REQUEST['action']=='turnos'){
 	

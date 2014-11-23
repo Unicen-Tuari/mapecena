@@ -30,22 +30,26 @@
 				<div class="col span_2_of_4">
 				  <div class="contact-form">
 				  	<h2 class="style">Contactanos</h2>
-					       <form method="post" action="#">
+					       <form method="POST" action="index.php?action=contacto">
 					    	<div>
 						    	<span><label>Nombre</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
+						    	<span><input name="nombre" type="text" class="textbox" required></span>
+						    </div>
+						    <div>
+						    	<span><label>Apellido</label></span>
+						    	<span><input name="apellido" type="text" class="textbox" required></span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    	<span><input name="email" type="email" class="textbox" required></span>
 						    </div>
 						    <div>
 						     	<span><label>Nro Telefónico</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    	<span><input name="tel" type="integer" class="textbox" ></span>
 						    </div>
 						    <div>
 						    	<span><label>Comentarios/Sugerencias</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+						    	<span><textarea name="comentario" required> </textarea></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" value="Enviar"></span>

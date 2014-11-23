@@ -472,9 +472,9 @@ p.para{
 .map{
 	margin: 4% 0;
 }
-.contact-form input[type="text"],.contact-form textarea{
+.contact-form input[type="text"],.contact-form textarea,.contact-form input[type="integer"],.contact-form input[type="email"]{
 	font-family:trebuchet ms, arial, sans-serif;
-	font-size:0.8725em;
+	font-size:1.5em;
 	color: #555;
 	padding: 15px;
 	display: block;
@@ -484,11 +484,11 @@ p.para{
 	outline: none;
 	-webkit-appearance: none;
 }
-.contact-form textarea{
-	resize:none;
-	height:120px;		
+.contact-form textarea,{
+	/*resize:none;*/
+	height:300px;		
 }
-.contact-form input[type="text"]:focus,.contact-form textarea:focus{
+.contact-form input[type="text"]:focus,.contact-form textarea:focus.contact-form input[type="integer"]:focus,.contact-form input[type="email"]:focus{
 	-webkit-transition: 0.9s;
 	-o-transition: 0.9s;
 	-moz-transition: 0.9s;
@@ -675,7 +675,7 @@ p.para{
 		padding: 16px 6px;
 		font-family:trebuchet ms, arial, sans-serif; 
 	}
-	.contact-form input[type="text"], .contact-form textarea {
+	.contact-form input[type="text"], .contact-form textarea, .contact-form input[type="integer"],.contact-form input[type="email"] {
 		width:90%;
 	}
 	

@@ -86,42 +86,60 @@ class ControllerUser
 		
 		$email= $_POST['user'];	 
 		$pass=$_POST['pass'];
-		
+		// echo "email: ".$email." ";
+		// echo "pass: ".$pass." ";
 		$IdUser = $this->model_comprobar_existencia_usuario->verificar_usuario($email,$pass);
-		
+		echo "IdUser:".$IdUser[0]["usuario"]." ";
 		if($IdUser == NULL){
 			// include_once("./vista/View_error_login.php");
 		 //    $error=new View_error_login();
 		 //    $error->error_login();
 			echo ('no se logueo');
 		}else{
-			$_SESSION['IDUsuario'] = $IdUser[0]["id_persona"];
+			$_SESSION['IDUsuario'] = $IdUser[0]["idUsuario"];
 			$_SESSION['usuario'] = $IdUser[0]["usuario"];
 			$_SESSION['esAdmin'] = $IdUser[0]["esAdmin"];
-			// echo ($_SESSION['IDUsuario']);
-			$this->Calendario();
+			echo "USUARIO: ".$email." ";
+			echo ($_SESSION['usuario']);
+			//$this->Calendario();
 
 		}
 	}		
 				
-	public function comprobar_existencia_usuario($email)
-	{
-
-		return $this->model_comprobar_existencia_usuario->verificar_usuario($email);
-	}
+	
 
 	public function registrarse()
 	{
 		$arr_registro=array();
+		echo('usrer:'.$_POST['usuario_registrarse']);
+		echo('pass:'.$_POST['pass_registrarse']);
+		echo('email:'.$_POST['email_registrarse']);
 
 		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['usuario_registrarse'],$_POST['pass_registrarse']);
 		//Lograr que por ajax detecte que no se puede poner el mismo mail o usuario
+		echo(' CAnt existeUsuario1: ');
+		$resultado = count($existeUsuario);
+		echo($resultado);
+		if($resultado != 0){//no existe el usuario por el campo usuario. Prueba por email
+			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['email_registrarse'],$_POST['pass_registrarse']);
+			$resultado = count($existeUsuario);
+			echo(' CAnt existeUsuario2: ');
+			$resultado = count($existeUsuario);
+			echo($resultado);
+		}
 
-		if($existeUsuario == NULL)
+		echo(' CAnt existeUsuario3: ');
+		$resultado = count($existeUsuario);
+		echo($resultado);
+		echo(' Estructura: ');
+		var_dump($existeUsuario);
+		die(' registrarse');
+
+		if($resultado == 0)//no existe el usuario
 		{
 			
 			$pass=$_POST['pass_registrarse'];
-			$arr_registro['usuario']			= strtolower ($_POST['usuario_registrarse']);	
+			$arr_registro['usuario']		= strtolower ($_POST['usuario_registrarse']);	
 			$arr_registro['nombre']			= strtolower ($_POST['nombre_registrarse']);
 			$arr_registro['apellido']		= strtolower ($_POST['apellido_registrarse']);
 			$arr_registro['dni']			= strtolower ($_POST['dni_registrarse']);

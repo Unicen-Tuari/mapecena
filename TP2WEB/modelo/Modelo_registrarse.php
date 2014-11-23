@@ -24,12 +24,12 @@ class model_registrarse extends modelodb
 			$fecha_registro	=	date("y/m/d");
 
 
-			// El id_persona debe incrementarse solo
+			
 			$sql = "INSERT INTO USUARIO(
 					usuario 			,					
 					nombre				,
 					apellido			,
-					dni_persona			,
+					dni					,
 					fecha_nacimiento	,
 					direccion			,
 					celular				,
@@ -42,7 +42,7 @@ class model_registrarse extends modelodb
 					:usuario 			,
 					:nombre				, 
 					:apellido			,				
-					:dni_persona		,
+					:dni				,
 					:fecha_nacimiento	,
 			 		:direccion			, 
 			 		:celular			,
@@ -62,7 +62,7 @@ class model_registrarse extends modelodb
 										':usuario'				=>$usuario				,											
 										':nombre'				=>$nombre				, 
 										':apellido'				=>$apellido				,				
-										':dni_persona'			=>$dni					,
+										':dni'					=>$dni					,
 										':fecha_nacimiento'		=>$fecha_nacimiento		,
 								 		':direccion'			=>$direccion			, 
 								 		':celular'				=>$Celular				,
