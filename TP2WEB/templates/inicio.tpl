@@ -16,7 +16,7 @@
 				<div class="col-md-10 info">
 					  <h2 class="style">Máquinas Nuevas</h2>
 					  <p class="para top">Aquí encontrarás todos nuestros nuevos modelos.</p>
-				     <div class="button"><a href="index.php?action=nuevas">Más</a></div>
+				     <div class="button"><a href="index.php?action=NUEVA">Más</a></div>
 				</div>
 				<div class="col-md-1"></div>
 		     </div>
@@ -28,7 +28,7 @@
 				<div class="col-md-10 info">
 					  <h2 class="style">Máquinas Usadas</h2>
 					  <p class="para top">Aquí se encuentra la maquinaria usada en perfecto estado.</p>
-				     <div class="button"><a href="index.php?action=usadas">Más</a></div>
+				     <div class="button"><a href="index.php?action=USADA">Más</a></div>
 				     </div>
 				<div class="col-md-1"></div>
 		     </div>

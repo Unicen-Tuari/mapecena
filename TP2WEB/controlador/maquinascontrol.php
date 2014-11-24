@@ -7,16 +7,10 @@ class maquinasControl{
 	public function actionMaquinas($estado){
 
 		$descripcion = new modeloMaquinas();
-		$vistamaquina = new maquinasvista();
-		// if ($estado == 'NUEVA')
-		// 	$est = 'N';
-		// else
-		// 	$est = 'U';
-		// echo($estado);
-		// $datos = $descripcion->devolverDescripcion($est);
+		$vistamaquina = new maquinasvista();		
 		$datos = $descripcion->devolverDescripcion($estado);
-		
-		$vistamaquina->set_maquina($datos,$estado);
+		$cantidad = count($datos);
+		$vistamaquina->set_maquina($datos,$estado,$cantidad);
 		$vistamaquina->render();
 		
 	}
@@ -25,8 +19,8 @@ class maquinasControl{
       
 		$maquinasQ = new modeloMaquinas();
 		$vistamaquina = new maquinasvista();
-		$busquedaRealizada = $_POST['inputBuscar'];
-		$MaqQ = $maquinasQ->busqueda($busquedaRealizada);	 	 
+		$busquedaRealizada = $_POST['inputBuscarM'];
+		$MaqQ = $maquinasQ->busqueda($busquedaRealizada);
 		$vistamaquina->busqueda($MaqQ);
 
 	}

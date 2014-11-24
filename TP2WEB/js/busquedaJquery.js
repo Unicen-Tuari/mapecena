@@ -2,14 +2,32 @@
 
 
 
-$("#formBusqueda").submit(function() 
+$("#formBusquedaM").submit(function() 
 {
   $.ajax({
     url: 'index.php',
     type: "POST",
-    data:$("#formBusqueda").serialize(), 
+    data:$("#formBusquedaM").serialize(), 
    success: function(data) {
       $("#resMaquinas").html(data);
+    }
+    
+  });
+  return false;
+});
+
+
+
+
+
+$("#formBusquedaE").submit(function() 
+{
+  $.ajax({
+    url: 'index.php',
+    type: "POST",
+    data:$("#formBusquedaE").serialize(), 
+   success: function(data) {
+      $("#resEventos").html(data);
     }
     
   });

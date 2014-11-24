@@ -115,13 +115,13 @@ class ControllerUser
 		echo('pass:'.$_POST['pass_registrarse']);
 		echo('email:'.$_POST['email_registrarse']);
 
-		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['usuario_registrarse'],$_POST['pass_registrarse']);
+		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario_admin($_POST['usuario_registrarse'],$_POST['pass_registrarse']);
 		//Lograr que por ajax detecte que no se puede poner el mismo mail o usuario
 		echo(' CAnt existeUsuario1: ');
 		$resultado = count($existeUsuario);
 		echo($resultado);
 		if($resultado != 0){//no existe el usuario por el campo usuario. Prueba por email
-			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario($_POST['email_registrarse'],$_POST['pass_registrarse']);
+			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario_admin($_POST['email_registrarse'],$_POST['pass_registrarse']);
 			$resultado = count($existeUsuario);
 			echo(' CAnt existeUsuario2: ');
 			$resultado = count($existeUsuario);
@@ -133,7 +133,7 @@ class ControllerUser
 		echo($resultado);
 		echo(' Estructura: ');
 		var_dump($existeUsuario);
-		die(' registrarse');
+		
 
 		if($resultado == 0)//no existe el usuario
 		{

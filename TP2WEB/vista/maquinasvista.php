@@ -4,8 +4,8 @@ require_once('view.php');
 
 class maquinasVista extends View	{
 
-	function set_maquina($arrM,$estado){
-		
+	function set_maquina($arrM,$estado,$cantidad){
+		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("maquinas",$arrM);
 		$this->smarty->assign("estado",$estado);
 	}
@@ -22,9 +22,10 @@ class maquinasVista extends View	{
 		$this->smarty->display('maquinas.tpl');
 	}	
 
-	function busqueda($b){
-		
-		$this->smarty->assign("maquinas",$b);
+	function busqueda($Resultado){
+		$cantidad = count($Resultado);
+		$this->smarty->assign("cantidad",$cantidad);
+		$this->smarty->assign("maquinas",$Resultado);
 		$this->smarty->display('solomaquina.tpl');
 
 	}	

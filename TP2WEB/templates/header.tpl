@@ -76,8 +76,8 @@
 				<li><a class ="active " href="index.php?action=inicio">Inicio</a> </li>
 				<li class="arrow"><a class="hsubs">Máquinas</a>  
 					<ul class="subs">
-			            <li><a  href="index.php?action=nuevas">Nuevas</a></li>
-			            <li><a  href="index.php?action=usadas">Usadas</a></li>
+			            <li><a  href="index.php?action=NUEVA">Nuevas</a></li>
+			            <li><a  href="index.php?action=USADA">Usadas</a></li>
 			        </ul>
 				</li>
 				<li><a href="index.php?action=eventos">Eventos</a></li>

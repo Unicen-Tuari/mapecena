@@ -11,10 +11,9 @@ Class Model_comprobar_existencia_usuario extends ModeloDB
 	public function load(){
 		}
 
-	public function verificar_usuario($usuario,$pass)
+	public function verificar_usuario_admin($usuario,$pass)
 	{	
-		echo( ' Modelo user:'.$usuario );
-		echo( ' Modelo pass:'.$pass );
+		//verifica que el usuario ingresado sea administrador
 		return $this->query("
 			SELECT idUsuario, usuario, email, esAdmin
 			FROM usuario

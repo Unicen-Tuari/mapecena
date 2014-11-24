@@ -15,7 +15,9 @@ class galeriaVista extends View	{
 	function render(){
 		$this->smarty->display('galeria.tpl');
 	}	
-
+	function renderModal(){
+		$this->smarty->display('modalGaleria.tpl');
+	}
 	
 	
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 04:55:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 00:14:51
          compiled from ".\templates\inicio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:32025546e76d2c05282-59969051%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14fed9e69511568bdc77c5953678657044bf7d2c' => 
     array (
       0 => '.\\templates\\inicio.tpl',
-      1 => 1416714952,
+      1 => 1416784480,
       2 => 'file',
     ),
   ),
@@ -38,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-md-10 info">
 					  <h2 class="style">Máquinas Nuevas</h2>
 					  <p class="para top">Aquí encontrarás todos nuestros nuevos modelos.</p>
-				     <div class="button"><a href="index.php?action=nuevas">Más</a></div>
+				     <div class="button"><a href="index.php?action=NUEVA">Más</a></div>
 				</div>
 				<div class="col-md-1"></div>
 		     </div>
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-md-10 info">
 					  <h2 class="style">Máquinas Usadas</h2>
 					  <p class="para top">Aquí se encuentra la maquinaria usada en perfecto estado.</p>
-				     <div class="button"><a href="index.php?action=usadas">Más</a></div>
+				     <div class="button"><a href="index.php?action=USADA">Más</a></div>
 				     </div>
 				<div class="col-md-1"></div>
 		     </div>

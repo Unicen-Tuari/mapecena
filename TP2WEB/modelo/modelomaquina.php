@@ -3,6 +3,9 @@
 include_once "./modelo/modelo.php";
 
 class modeloMaquinas extends ModeloDB{
+	public function load(){
+
+	}
 
 	public function devolverDescripcion($estado)
 	{
@@ -16,12 +19,6 @@ class modeloMaquinas extends ModeloDB{
 			where ((c.id_contenido = m.id_contenido) and (m.estado = '$estado'))
             GROUP BY m.id_contenido
             ");
-
-	}
-
-
-	
-	public function load(){
 
 	}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 04:55:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 23:21:02
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21079546e6e4f46ab45-25734718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416714426,
+      1 => 1416781128,
       2 => 'file',
     ),
   ),
@@ -97,8 +97,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a class ="active " href="index.php?action=inicio">Inicio</a> </li>
 				<li class="arrow"><a class="hsubs">Máquinas</a>  
 					<ul class="subs">
-			            <li><a  href="index.php?action=nuevas">Nuevas</a></li>
-			            <li><a  href="index.php?action=usadas">Usadas</a></li>
+			            <li><a  href="index.php?action=NUEVA">Nuevas</a></li>
+			            <li><a  href="index.php?action=USADA">Usadas</a></li>
 			        </ul>
 				</li>
 				<li><a href="index.php?action=eventos">Eventos</a></li>

@@ -18,6 +18,14 @@ class eventosVista extends View	{
 	function renderC(){
 		$this->smarty->display('carouselE.tpl');
 	}
+
+	function busqueda($Resultado){
+		$cantidad = count($Resultado);
+		$this->smarty->assign("cantidad",$cantidad);
+		$this->smarty->assign("eventos",$Resultado);
+		$this->smarty->display('soloevento.tpl');
+		// $this->smarty->display('eventos.tpl');
+	}	
 	
 }
 
