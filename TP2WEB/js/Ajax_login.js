@@ -49,7 +49,7 @@ $("#formLogin").submit(function()
 {
 
   $.ajax({
-    url: "index.php?action=CRAK",
+    url: "index.php",
     type: "POST",
     data:$("#formLogin").serialize(),
    success: function(data) {

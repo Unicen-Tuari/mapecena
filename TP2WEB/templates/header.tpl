@@ -141,7 +141,7 @@
               <div class="form-group">
                   <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
                   <div class="col-lg-10">
-                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Día/Mes/Año" >
+                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Año/Mes/Día" >
                   </div>
               </div>
               <div class="form-group">

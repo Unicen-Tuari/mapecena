@@ -16,10 +16,6 @@ $("#formBusquedaM").submit(function()
   return false;
 });
 
-
-
-
-
 $("#formBusquedaE").submit(function() 
 {
   $.ajax({

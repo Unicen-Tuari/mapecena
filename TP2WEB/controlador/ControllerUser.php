@@ -111,34 +111,34 @@ class ControllerUser
 	public function registrarse()
 	{
 		$arr_registro=array();
-		echo('usrer:'.$_POST['usuario_registrarse']);
-		echo('pass:'.$_POST['pass_registrarse']);
-		echo('email:'.$_POST['email_registrarse']);
 
-		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario_admin($_POST['usuario_registrarse'],$_POST['pass_registrarse']);
-		//Lograr que por ajax detecte que no se puede poner el mismo mail o usuario
-		echo(' CAnt existeUsuario1: ');
+		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario(
+									$_POST['usuario_registrarse']);		
 		$resultado = count($existeUsuario);
+		echo ('USUARIO: '.$_POST['usuario_registrarse']);
+		echo(' Estructura111: ');
 		echo($resultado);
-		if($resultado != 0){//no existe el usuario por el campo usuario. Prueba por email
-			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario_admin($_POST['email_registrarse'],$_POST['pass_registrarse']);
+		var_dump($existeUsuario);
+
+		if($resultado == 0){//si no existe el usuario por el campo usuario. Prueba con el email
+			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario(
+									$_POST['email_registrarse']);
 			$resultado = count($existeUsuario);
-			echo(' CAnt existeUsuario2: ');
-			$resultado = count($existeUsuario);
-			echo($resultado);
+			echo('entro');
 		}
 
+		
 		echo(' CAnt existeUsuario3: ');
 		$resultado = count($existeUsuario);
 		echo($resultado);
 		echo(' Estructura: ');
-		var_dump($existeUsuario);
 		
+		var_dump($existeUsuario);
+	
 
-		if($resultado == 0)//no existe el usuario
-		{
-			
-			$pass=$_POST['pass_registrarse'];
+		
+		if($resultado == 0){
+						
 			$arr_registro['usuario']		= strtolower ($_POST['usuario_registrarse']);	
 			$arr_registro['nombre']			= strtolower ($_POST['nombre_registrarse']);
 			$arr_registro['apellido']		= strtolower ($_POST['apellido_registrarse']);
@@ -147,19 +147,23 @@ class ControllerUser
 			$arr_registro['email']			= strtolower ($_POST['email_registrarse']);
 			$arr_registro['Celular']		= strtolower ($_POST['Celular_registrarse']);
 			$arr_registro['Telefono_fijo']	= strtolower ($_POST['Telefono_fijo_registrarse']);
-			$arr_registro['pass']			= strtolower ($pass);
+			$arr_registro['pass']			= strtolower ($_POST['pass_registrarse']);
 			$arr_registro['direccion']		= strtolower ($_POST['Direccion_registrarse']);
+			$arr_registro['esAdmin']		= strtolower ('0');
 		
 			$this->model_registrarse->registrar($arr_registro);
+			
 			$this->view_registrado_exitoso->r_exitoso();
 		}else
 			{ 
+				echo(' existeUsuario: '.$existeUsuario[0]['usuario']);
+				echo(' existeUsuario: '.$existeUsuario[0]['esAdmin']);
 				include_once("./vista/View_error_login.php");
 				$error=new View_error_login();
-				$mail_existente="El email ya fue usado para otra cuenta, ingrese otro o presione el  boton ingresar";
+				$mail_existente="<h2El email ya fue usado para otra cuenta, ingrese otro o presione el  boton ingresar";
 				$error->error_login($mail_existente);
 			}
-
+		die(' registrarse');
 	}
 }
 

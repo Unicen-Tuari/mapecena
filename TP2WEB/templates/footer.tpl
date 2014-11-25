@@ -8,9 +8,12 @@
 	<div class="footer">
 		<div class="f_nav">
 		<ul>
-			<li><a href="https://www.facebook.com/cristian.peronja.1">Facebook /</a></li>
-			<li><a href="https://twitter.com/CristianPeronja">Twitter </a></li>
-			
+			<li><a href="https://www.facebook.com/cristian.peronja.1">
+				<i class="fa fa-facebook fa-1x"></i> /<a></li>
+
+			<li><a href="https://twitter.com/CristianPeronja"><i class="fa fa-twitter fa-1x"></i></a></li>
+	
+
 		</ul>
 		</div>
 		

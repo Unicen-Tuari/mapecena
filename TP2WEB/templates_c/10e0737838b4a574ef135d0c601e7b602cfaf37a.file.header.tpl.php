@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 23:21:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 21:13:45
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21079546e6e4f46ab45-25734718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416781128,
+      1 => 1416859913,
       2 => 'file',
     ),
   ),
@@ -162,7 +162,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="form-group">
                   <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
                   <div class="col-lg-10">
-                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Día/Mes/Año" >
+                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Año/Mes/Día" >
                   </div>
               </div>
               <div class="form-group">

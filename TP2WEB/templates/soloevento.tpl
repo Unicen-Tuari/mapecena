@@ -26,14 +26,13 @@
     </div>
 </div>
 
-
 {/foreach}
 
 {else}
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6"><h2 class="style">No se encontraron resultados para su búsqueda</h2></div>
-  <div class="col-md-3"></div>
-</div>
-<br>				
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h2 class="style">No se encontraron resultados para su búsqueda</h2></div>
+      <div class="col-md-3"></div>
+    </div>
+    <br>				
 {/if}

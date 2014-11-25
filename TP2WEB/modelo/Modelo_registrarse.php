@@ -16,16 +16,15 @@ class model_registrarse extends modelodb
 			$apellido		=	$Registro["apellido"];
 			$dni			=	$Registro["dni"];
 			$email			=	$Registro["email"];
-			$Celular		=	$Registro["Celular"];
-			$fecha_nacimiento=	date("y/m/d");
-			$Telefono_fijo	=	$Registro["Telefono_fijo"];
-			$pass			=	$Registro["pass"];
+			$celular		=	$Registro["Celular"];
+			$fecha_nacimiento=	$Registro['FechaNacimiento'];
+			$telefono_fijo	=	$Registro["Telefono_fijo"];
+			$password		=	$Registro["pass"];
 			$direccion		=	$Registro["direccion"];
 			$fecha_registro	=	date("y/m/d");
 
 
-			
-			$sql = "INSERT INTO USUARIO(
+		$this->query("INSERT INTO usuario(
 					usuario 			,					
 					nombre				,
 					apellido			,
@@ -38,41 +37,20 @@ class model_registrarse extends modelodb
 					password			,
 					fecha_registro
 					)
-			VALUES( 
-					:usuario 			,
-					:nombre				, 
-					:apellido			,				
-					:dni				,
-					:fecha_nacimiento	,
-			 		:direccion			, 
-			 		:celular			,
-			 		:telefono_fijo		, 
-			 		:email				, 
-			 		:password			,
-			 		:fecha_registro
-			 	  )";
+		VALUES( 
+					'$usuario'			,
+					'$nombre'			, 
+					'$apellido'			,
+					'$dni'				,
+					'$fecha_nacimiento'	,
+			 		'$direccion'		, 
+			 		'$celular'			,
+			 		'$telefono_fijo'	, 
+			 		'$email'			, 
+			 		'$password'			,
+			 		'$fecha_registro'
 
-
-			$q=$this->connection(); 
-			$preparado=$q->prepare($sql);
-
-			$preparado->execute(
-								array
-									(		
-										':usuario'				=>$usuario				,											
-										':nombre'				=>$nombre				, 
-										':apellido'				=>$apellido				,				
-										':dni'					=>$dni					,
-										':fecha_nacimiento'		=>$fecha_nacimiento		,
-								 		':direccion'			=>$direccion			, 
-								 		':celular'				=>$Celular				,
-								 		':telefono_fijo'		=>$Telefono_fijo		, 
-								 		':email'				=>$email				, 
-								 		':password'				=>$pass					,
-								 		':fecha_registro'		=>$fecha_registro
-					 				 )
-								);
-
+			 	  )");
 
 		}
 		

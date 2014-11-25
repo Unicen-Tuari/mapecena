@@ -5,6 +5,8 @@ require_once('view.php');
 class eventosVista extends View	{
 
 	function set_eventos($arrE){
+		$cantidad = count($arrE);
+		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("eventos",$arrE);
 	}
 	function set_img($arrI){
@@ -24,8 +26,13 @@ class eventosVista extends View	{
 		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("eventos",$Resultado);
 		$this->smarty->display('soloevento.tpl');
-		// $this->smarty->display('eventos.tpl');
+		
 	}	
+
+	function nuevoEvento()
+	{
+		$this->smarty->display('agregarE.tpl'); //agregarE
+	}
 	
 }
 

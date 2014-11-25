@@ -30,6 +30,17 @@ class maquinasVista extends View	{
 
 	}	
 
+	function nuevaMaquina()
+	{
+		$this->smarty->display('agregarMaq.tpl'); 
+	}
+
+	function modificarMaquina($maquina)
+	{
+		$this->smarty->assign("maquinas",$maquina);
+		$this->smarty->display('modificarMaq.tpl'); 
+	}
+
 }
 
 ?>

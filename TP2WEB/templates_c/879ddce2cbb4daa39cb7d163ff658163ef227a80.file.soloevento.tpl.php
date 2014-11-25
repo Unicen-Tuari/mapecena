@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 08:05:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 01:46:25
          compiled from ".\templates\soloevento.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:48185472bb1d22a239-41790965%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '879ddce2cbb4daa39cb7d163ff658163ef227a80' => 
     array (
       0 => '.\\templates\\soloevento.tpl',
-      1 => 1416812698,
+      1 => 1416876314,
       2 => 'file',
     ),
   ),
@@ -65,15 +65,14 @@ $_smarty_tpl->tpl_vars['evento']->_loop = true;
     </div>
 </div>
 
-
 <?php } ?>
 
 <?php }else{ ?>
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6"><h2 class="style">No se encontraron resultados para su búsqueda</h2></div>
-  <div class="col-md-3"></div>
-</div>
-<br>				
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h2 class="style">No se encontraron resultados para su búsqueda</h2></div>
+      <div class="col-md-3"></div>
+    </div>
+    <br>				
 <?php }?>
 <?php }} ?>
