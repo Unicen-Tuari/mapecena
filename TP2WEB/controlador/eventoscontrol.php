@@ -11,6 +11,8 @@ class eventosControl{
 		$view = new eventosVista();
 		$e = $eventos->load();
 		$view->set_eventos($e);
+		if (isset($_SESSION['usuario']))
+			$view->SetUser($_SESSION['usuario']);
 		$view->render();
 		
 	}

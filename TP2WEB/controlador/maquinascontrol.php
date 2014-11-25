@@ -11,6 +11,8 @@ class maquinasControl{
 		$datos = $descripcion->devolverDescripcion($estado);
 		$cantidad = count($datos);
 		$vistamaquina->set_maquina($datos,$estado,$cantidad);
+		if (isset($_SESSION['usuario']))
+			$vistamaquina->SetUser($_SESSION['usuario']);
 		$vistamaquina->render();
 		
 	}
@@ -51,6 +53,8 @@ class maquinasControl{
 		$imgMaqB = $this->modeloMaquinas->load_ResFinales($q);		 	 
 		
 		$this->view->set_maquinas($imgMaqB);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
 		$this->view->render();
 	}	
 

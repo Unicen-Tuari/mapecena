@@ -20,10 +20,13 @@ ini_set("display_errors", 1);
 	// 	session_start();
 	// 	session_destroy();
 	// }
+
+
 if(!isset($_SESSION['IDUsuario']))
 	echo('DESLOGUEADO ');
+
 if(isset($_SESSION['IDUsuario']))
-	echo('Logueado ');
+	echo('Logueado: '.$_SESSION['usuario']);
 
 if(isset($_POST['inputBuscarE'])){
 		include "./controlador/eventoscontrol.php";

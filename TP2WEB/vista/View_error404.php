@@ -9,6 +9,12 @@ class error_404 extends View
 	{
 		$this->smarty->display('error404.tpl');
 	}
+	
+	// public function SetUser($usuario){
+		
+	// 	$this->smarty->assign("usuario",$usuario);
+	// }
+
 }
 
 ?>

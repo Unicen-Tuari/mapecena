@@ -11,6 +11,11 @@ class view_registrado_exitoso extends View
 		$this->smarty->display('registrado_exitoso.tpl');
 	}
 
+	// public function SetUser($usuario){
+		
+	// 	$this->smarty->assign("usuario",$usuario);
+	// }
+
 }
 
 

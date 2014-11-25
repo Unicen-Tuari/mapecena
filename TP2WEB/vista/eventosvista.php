@@ -4,24 +4,30 @@ require_once('view.php');
 
 class eventosVista extends View	{
 
-	function set_eventos($arrE){
+	// public function SetUser($usuario){
+		
+	// 	$this->smarty->assign("usuario",$usuario);
+	// }
+	
+	public function set_eventos($arrE){
 		$cantidad = count($arrE);
 		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("eventos",$arrE);
 	}
-	function set_img($arrI){
+	
+	public function set_img($arrI){
 		$this->smarty->assign("imagenes",$arrI);		
 	}
 
-	function render(){
+	public function render(){
 		$this->smarty->display('eventos.tpl');
 	}	
 
-	function renderC(){
+	public function renderC(){
 		$this->smarty->display('carouselE.tpl');
 	}
 
-	function busqueda($Resultado){
+	public function busqueda($Resultado){
 		$cantidad = count($Resultado);
 		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("eventos",$Resultado);
@@ -29,7 +35,7 @@ class eventosVista extends View	{
 		
 	}	
 
-	function nuevoEvento()
+	public function nuevoEvento()
 	{
 		$this->smarty->display('agregarE.tpl'); //agregarE
 	}

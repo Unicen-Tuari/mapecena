@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 22:10:27
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:39:50
          compiled from ".\templates\registrado_exitoso.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30008547168e1d4e700-28742381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '615b3a96c721a6655360657d49aaad9e63c4b3e8' => 
     array (
       0 => '.\\templates\\registrado_exitoso.tpl',
-      1 => 1416863405,
+      1 => 1416944271,
       2 => 'file',
     ),
   ),
@@ -26,12 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 </div>
 <br><br><br><br>
-<!--           <div class="container">
-            <div class="row  " >
-              <div class="col-lg-4">
-              </div>
 
-              <div class="col-lg-4"> -->
                 <div class="row">
                   <div class="col-md-3"></div>
                   <div class="col-md-6">
@@ -41,20 +36,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="col-md-3"></div>
                 </div>
                 <br>  
-                 <!--  <div class="intro-text"   id="portfolio">
-                      <span class="name">Regitrado Exitoso!! </span>
-                      <hr class="star-light">
-                      <span class="skills"> Presione el botón Ingresar para comenzar a utilizar la aplicación.
-                      </span>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-              </div>
-            </div>
-          </div> -->
-       
-
-
-
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

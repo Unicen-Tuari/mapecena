@@ -2,9 +2,6 @@
 
 include_once("view.php");
 
-
-
-
 class view_tabla_peticiones extends View
 {
 	public function tabla_peticiones($lista_de_reclamos)
@@ -14,6 +11,11 @@ class view_tabla_peticiones extends View
 		
 		$this->smarty->display('view_tabla_peticiones.php');
 	}
+
+	// public function SetUser($usuario){
+		
+	// 	$this->smarty->assign("usuario",$usuario);
+	// }
 
 }
 

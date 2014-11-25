@@ -5,6 +5,11 @@ require_once('view.php');
 class galeriaVista extends View	{
 
 
+	function SetUser($usuario){
+		
+		$this->smarty->assign("usuario",$usuario);
+	}
+	
 	function set_galeria($arrG){
 		$this->smarty->assign("galeriaImg",$arrG);
 	}

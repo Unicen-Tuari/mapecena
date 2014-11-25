@@ -6,6 +6,8 @@ class contactoControl{
 	public function actionControl(){
 		
 		$view = new contactoVista;
+		if (isset($_SESSION['usuario']))
+			$view->SetUser($_SESSION['usuario']);
 		$view->render();
 	}
 

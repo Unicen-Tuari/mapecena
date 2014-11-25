@@ -115,28 +115,15 @@ class ControllerUser
 		$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario(
 									$_POST['usuario_registrarse']);		
 		$resultado = count($existeUsuario);
-		echo ('USUARIO: '.$_POST['usuario_registrarse']);
-		echo(' Estructura111: ');
-		echo($resultado);
-		var_dump($existeUsuario);
 
 		if($resultado == 0){//si no existe el usuario por el campo usuario. Prueba con el email
 			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario(
 									$_POST['email_registrarse']);
 			$resultado = count($existeUsuario);
-			echo('entro');
 		}
 
-		
-		echo(' CAnt existeUsuario3: ');
 		$resultado = count($existeUsuario);
-		echo($resultado);
-		echo(' Estructura: ');
-		
-		var_dump($existeUsuario);
-	
 
-		
 		if($resultado == 0){
 						
 			$arr_registro['usuario']		= strtolower ($_POST['usuario_registrarse']);	
@@ -152,7 +139,6 @@ class ControllerUser
 			$arr_registro['esAdmin']		= strtolower ('0');
 		
 			$this->model_registrarse->registrar($arr_registro);
-			
 			$this->view_registrado_exitoso->r_exitoso();
 		}else
 			{ 
@@ -163,7 +149,6 @@ class ControllerUser
 				$mail_existente="<h2El email ya fue usado para otra cuenta, ingrese otro o presione el  boton ingresar";
 				$error->error_login($mail_existente);
 			}
-		die(' registrarse');
 	}
 }
 

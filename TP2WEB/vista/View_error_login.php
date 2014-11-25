@@ -4,7 +4,12 @@ include_once("view.php");
 
 class View_error_login extends View
 {
+	public function SetUser($usuario){
+		
+		$this->smarty->assign("usuario",$usuario);
+	}
 
+	
 	public function error_login($mail_existente=false)
 	{
 

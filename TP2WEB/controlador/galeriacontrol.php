@@ -11,6 +11,8 @@ class galeriaControl{
 		$e = $galeria->load();
 
 		$view->set_galeria($e);
+		if (isset($_SESSION['usuario']))
+			$view->SetUser($_SESSION['usuario']);
 		$view->render();
 
 	}
@@ -23,7 +25,8 @@ class galeriaControl{
 		$imgMaq = $galeria->soloImagenesDe($id);		 	 
 		
 		$view->set_galeria($imgMaq);
-
+		if (isset($_SESSION['usuario']))
+			$view->SetUser($_SESSION['usuario']);
 		$view->render();
 
 	}
@@ -36,7 +39,8 @@ class galeriaControl{
 		$imgMaqB = $galeria->load_ResFinales($q);		 	 
 		
 		$view->set_maquinas($imgMaqB);
-
+		if (isset($_SESSION['usuario']))
+			$view->SetUser($_SESSION['usuario']);
 		$view->render();
 
 	}

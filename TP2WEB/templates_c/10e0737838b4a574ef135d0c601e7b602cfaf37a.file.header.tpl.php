@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 21:13:45
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 21:17:54
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21079546e6e4f46ab45-25734718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416859913,
+      1 => 1416946667,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_546e6e4f479393_90919444',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_546e6e4f479393_90919444')) {function content_546e6e4f479393_90919444($_smarty_tpl) {?><!DOCTYPE HTML>
@@ -53,11 +57,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!-- Registracion y logueo-->
 <div class="navbar-collapse collapse">
   <ul class="nav navbar-nav navbar-right">
+  <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
+    
    <li> <a href="#" title="Click para registrarse y comenzar a utilizar la aplicacion" data-toggle="modal" data-target="#Registrarse"><i class="fa fa-sign-in fa-1x"></i>  Registrarse</a></li>
     <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  Iniciar sesión</a></li>
+    <?php }else{ ?>
+    <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</a></li>
+    <?php }?>
   </ul>
-  <form class="navbar-form navbar-right">
-  </form>
+
+  <!-- <form class="navbar-form navbar-right">
+  </form> -->
 </div>
 
 <!-- FIN Registracion y logueo-->
@@ -133,11 +144,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+        <span class="sr-only" onclick="ResetForm()">Cerrar</span></button>
         <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
       </div>
       <div class="modal-body">
-       <form class="form-horizontal"  action="index.php" method="POST">
+       <form class="form-horizontal" id="registro" action="index.php" method="POST">
         <fieldset>
             <legend>Ingrese todo los datos requeridos.</legend>
               
@@ -161,8 +173,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
               <div class="form-group">
                   <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
+
                   <div class="col-lg-10">
-                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Año/Mes/Día" >
+                  <input type="date" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" step="1" min="1900-01-01" max="3000-12-31" value="2014-11-26">
                   </div>
               </div>
               <div class="form-group">
@@ -207,7 +220,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
               <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2">
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ResetForm()" >Cancelar</button>
                         <button type="submit" class="btn btn-primary">Registrarse</button>
                   </div>
               </div>
@@ -278,4 +291,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
   </div>
 </div>
+
 <?php }} ?>
