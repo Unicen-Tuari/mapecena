@@ -18,8 +18,10 @@ CREATE TABLE `contactos` (
   `Email` varchar(250) COLLATE utf8_spanish_ci NOT NULL DEFAULT '',
   `Comentario` longtext COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+INSERT INTO `contactos` (`id`, `Nombre`, `Apellido`, `Telefono`, `Email`, `Comentario`) VALUES
+(1,	'Matias',	'Apecena',	'matiasapecena@yahoo.com',	'123',	' prueba');
 
 DROP TABLE IF EXISTS `contenido`;
 CREATE TABLE `contenido` (
@@ -27,7 +29,7 @@ CREATE TABLE `contenido` (
   `nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `texto` longtext COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_contenido`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `contenido` (`id_contenido`, `nombre`, `texto`) VALUES
 (1,	'FR600',	'0Km, 4WD, Motor FPT Cursor 13 Tier III, 6 cilindros en línea, 544 cv de potencia nominal hasta 600 cv de potencia máxima, tanque de combustible de 1.220 lts, de capacidad, transmisión hidrostática con traba de diferencial, velocidad máxima en carretera de 40 km. a 1400 rpm, detección de metal con indicador de posición.\nCabezal de 6 mts. 8-70.\n'),
@@ -67,7 +69,7 @@ CREATE TABLE `imagenes` (
   PRIMARY KEY (`id_imagen`),
   KEY `id_contenido` (`id_contenido`),
   CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`id_contenido`) REFERENCES `contenido` (`id_contenido`)
-) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `imagenes` (`id_imagen`, `id_contenido`, `ruta`) VALUES
 (1,	1,	'images/Nuevos/FR600/FR600_001.jpg'),
@@ -270,11 +272,12 @@ CREATE TABLE `usuario` (
   `fecha_registro` date NOT NULL,
   `esAdmin` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `usuario` (`idUsuario`, `Usuario`, `nombre`, `apellido`, `dni`, `fecha_nacimiento`, `email`, `celular`, `telefono_fijo`, `direccion`, `password`, `fecha_registro`, `esAdmin`) VALUES
-(1,	'fran',	'Franco',	'Aller',	227417278,	'2001-07-22',	'franco.e.aller@gmail.com',	2147483647,	0,	'4 de Abril',	'fran',	'2020-07-22',	CONV('0', 2, 10) + 0),
+(1,	'admin',	'Administrador',	'',	123456789,	'2001-07-22',	'12345@yahoo.com',	123456,	123456,	'4 de Abril',	'123',	'2020-07-22',	CONV('1', 2, 10) + 0),
 (2,	'apecena',	'matias',	'apecena',	0,	'2014-11-12',	'matiasapecena@yahoo.com',	1,	1,	'Costa Rica 146 E 5',	'a',	'2014-11-12',	CONV('1', 2, 10) + 0),
-(3,	'a',	'',	'',	0,	NULL,	'',	0,	NULL,	'',	'a',	'0000-00-00',	CONV('0', 2, 10) + 0);
+(3,	'a',	'',	'',	0,	NULL,	'',	0,	NULL,	'',	'a',	'0000-00-00',	CONV('0', 2, 10) + 0),
+(4,	'dana',	'daniela',	'garcia',	1233,	'2014-11-26',	'dana@yahoo.com',	0,	0,	'',	'123',	'2014-11-26',	CONV('0', 2, 10) + 0);
 
--- 2014-11-26 09:10:06
+-- 2014-11-26 13:52:00
