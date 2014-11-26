@@ -5,15 +5,15 @@ ini_set("display_errors", 1);
  
 
 if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login')){	
-		include_once "./controlador/ControllerUser.php";
-		$log= new ControllerUser();
+		include_once "./controlador/controladorUser.php";
+		$log= new controladorUser();
 		$log->login();	
 		
 }
 else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='logout')){
-		include_once "./controlador/ControllerUser.php";
-		$controller = new ControllerUser();
-		$controller->logout();
+		include_once "./controlador/controladorUser.php";
+		$controlador = new controladorUser();
+		$controlador->logout();
 }
 
 if(isset($_POST['inputBuscarE'])){
@@ -27,19 +27,19 @@ else if(isset($_POST['inputBuscarM'])){
 		$c->actionBusqueda();
 }
 else if (isset($_POST['pass_registrarse'])){
-		include_once("./controlador/ControllerUser.php");
-		$Registrar= new ControllerUser();
+		include_once("./controlador/controladorUser.php");
+		$Registrar= new controladorUser();
 		$Registrar->registrarse();
 }
 else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login')){	
-		include_once("./controlador/ControllerUser.php");
-		$log= new ControllerUser();
+		include_once("./controlador/controladorUser.php");
+		$log= new controladorUser();
 		$log->login();	
 		
 }else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='inicio'){
 		include_once "./controlador/indexcontrol.php";
-		$controller = new IndexControl();
-		$controller->actionIndex();
+		$controlador = new IndexControl();
+		$controlador->actionIndex();
 
 }else if($_REQUEST['action']=='quienessomos'){
 		include_once "./controlador/aboutcontrol.php";
@@ -121,17 +121,32 @@ else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login'))
 
 }else if($_REQUEST['action']=='turnos'){
 	include_once "./controlador/turnoscontrol.php";
-	$controller = new TurnosControl();
-	$controller->actionTurnos();
+	$controlador = new TurnosControl();
+	$controlador->actionTurnos();
 }else if($_REQUEST['action']=='eventos'){
 	include_once "./controlador/eventoscontrol.php";
 	$c = new eventosControl();
 	$c->actionEventos();
 		
+}else if($_REQUEST['action']=='usuarios'){
+	include_once "./controlador/usuariocontrol.php";
+	$controlador = new usuarioControl();
+	$controlador->actionUsuario();
+	
+}else if($_REQUEST['action']=='modificarUsuario'){
+	include_once "./controlador/usuariocontrol.php";
+	$controlador = new usuarioControl();
+	$controlador->ModificarUsuario();
+	
+}else if($_REQUEST['action']=='eliminarUsuario'){
+	include_once "./controlador/usuariocontrol.php";
+	$controlador = new usuarioControl();
+	$controlador->eliminarUsuario();
+	
 }else if($_REQUEST['action']=='galeria'){
 	include_once "./controlador/galeriacontrol.php";
-	$controller = new galeriaControl();
-	$controller->actionGaleria();
+	$controlador = new galeriaControl();
+	$controlador->actionGaleria();
 	
 }else if($_REQUEST['action']=='galeriaId'){							
 	if(array_key_exists('id', $_GET)){
@@ -140,13 +155,13 @@ else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login'))
 		$c->soloImagenesDe($_GET['id']);									
 	}
 }else if($_REQUEST['action']=='errorLogueo'){
-		include_once "./controlador/ControllerUser.php";
-		$c = new ControllerUser();
+		include_once "./controlador/controladorUser.php";
+		$c = new controladorUser();
 		$c->errorLogueo();
 		
 }else if($_REQUEST['action']=='errorRegistro'){
-		include_once "./controlador/ControllerUser.php";
-		$c = new ControllerUser();
+		include_once "./controlador/controladorUser.php";
+		$c = new controladorUser();
 		$c->errorRegistro();
 		
 }else{

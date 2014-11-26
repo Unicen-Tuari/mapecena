@@ -109,10 +109,15 @@
               {/if}
       				<li><a href="index.php?action=galeria">Galería</a> </li>
       				<li><a href="index.php?action=quienessomos">Quienes somos</a></li>
-      				<li><a href="index.php?action=contacto">Contacto</a> </li>
-              {if (isset($usuario))}
-      				  <li><a id = "turnos" href="index.php?action=turnos" >Turnos</a> </li>
+              {if (!isset($esAdmin) or ($esAdmin eq 0))}
+      				  <li><a href="index.php?action=contacto">Contacto</a> </li>
               {/if}
+              {if (isset($usuario))}
+      				  <li><a id = "turnos" href="index.php?action=turnos" >Test Drive</a> </li>
+              {/if}
+              {if (isset($esAdmin) and ($esAdmin eq 1))}
+                <li><a href="index.php?action=usuarios" title="Click editar o eliminar usuarios">Usuarios</a> </li>  
+              {/if}   
               
       				<!-- FIN Barra de opciones -->
       			</div>	

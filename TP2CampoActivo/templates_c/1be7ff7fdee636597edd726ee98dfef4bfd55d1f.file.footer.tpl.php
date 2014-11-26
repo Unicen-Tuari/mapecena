@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 15:01:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 15:20:47
          compiled from ".\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:286125475dd46f34dd8-93800478%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1416985075,
+      1 => 1417010674,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5475dd46f39920_92466268',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5475dd46f39920_92466268')) {function content_5475dd46f39920_92466268($_smarty_tpl) {?><div class="clear"></div>
 
@@ -46,9 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 </div>
 </div>
-	<script type="text/javascript" src="./js/scripts.js"></script>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->     
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>     <!-- Include all compiled plugins (below), or include individual files as needed -->     <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/scripts.js"></script>  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>        <script src="js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery.js" type="text/javascript"></script>
 	<script src="./js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="./js/busquedaJquery.js" type="text/javascript"></script>

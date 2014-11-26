@@ -5,7 +5,7 @@ ini_set("display_errors",1);
 
 
 
-class ControllerUser
+class controladorUser
 {			
 
 	/*******Atributos***********/
@@ -38,14 +38,13 @@ class ControllerUser
 		$this->modeloRegistro						= 	new modeloRegistro();
 	}
 
-	
-			
 	public function errorLogueo()
 	{
 		include "./vista/vistaErrores.php";
 		$error = new Errores();
 		$error->errorLogueo();
 	}
+	
 
 	public function errorRegistro()
 	{

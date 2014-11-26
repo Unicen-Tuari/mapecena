@@ -280,4 +280,4 @@ INSERT INTO `usuario` (`idUsuario`, `Usuario`, `nombre`, `apellido`, `dni`, `fec
 (3,	'a',	'',	'',	0,	NULL,	'',	0,	NULL,	'',	'a',	'0000-00-00',	CONV('0', 2, 10) + 0),
 (4,	'dana',	'daniela',	'garcia',	1233,	'2014-11-26',	'dana@yahoo.com',	0,	0,	'',	'123',	'2014-11-26',	CONV('0', 2, 10) + 0);
 
--- 2014-11-26 13:52:00
+-- 2014-11-26 17:57:15

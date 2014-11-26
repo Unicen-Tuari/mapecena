@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 15:01:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 20:16:00
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:109675475dd46e92840-16751730%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1417009723,
+      1 => 1417029200,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5475dd46f1c018_85281438',
   'variables' => 
   array (
     'usuario' => 0,
     'esAdmin' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5475dd46f1c018_85281438',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5475dd46f1c018_85281438')) {function content_5475dd46f1c018_85281438($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
@@ -136,10 +136,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <?php }?>
       				<li><a href="index.php?action=galeria">Galería</a> </li>
       				<li><a href="index.php?action=quienessomos">Quienes somos</a></li>
-      				<li><a href="index.php?action=contacto">Contacto</a> </li>
-              <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
-      				  <li><a id = "turnos" href="index.php?action=turnos" >Turnos</a> </li>
+              <?php if ((!isset($_smarty_tpl->tpl_vars['esAdmin']->value)||($_smarty_tpl->tpl_vars['esAdmin']->value==0))){?>
+      				  <li><a href="index.php?action=contacto">Contacto</a> </li>
               <?php }?>
+              <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
+      				  <li><a id = "turnos" href="index.php?action=turnos" >Test Drive</a> </li>
+              <?php }?>
+              <?php if ((isset($_smarty_tpl->tpl_vars['esAdmin']->value)&&($_smarty_tpl->tpl_vars['esAdmin']->value==1))){?>
+                <li><a href="index.php?action=usuarios" title="Click editar o eliminar usuarios">Usuarios</a> </li>  
+              <?php }?>   
               
       				<!-- FIN Barra de opciones -->
       			</div>	
