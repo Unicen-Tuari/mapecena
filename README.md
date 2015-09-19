@@ -3,7 +3,19 @@
 
 ##Tema: Cabañas Mapu Suyai
 ***
+###1er Entrega
 
+Introduccion/Historia	
+Contacto	
+Inicio/Cabañas/Promociones y Tarifas/Ubicacion	
+Lista Cabañas	
+Ver una cabaña	
+Servicios de cada cabaña	
+Tarifas (Pagina aparte)	
+Galeria de las cabañas (Fija)	
+Administrador solo crear
+
+***
 ###Cerrar issues
 Sintaxis:
 
