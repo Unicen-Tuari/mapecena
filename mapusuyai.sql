@@ -1,0 +1,30 @@
+-- Adminer 4.2.2 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+CREATE DATABASE `mapusuyai` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
+USE `mapusuyai`;
+
+DROP TABLE IF EXISTS `cabaña`;
+CREATE TABLE `cabaña` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NOMBRE` varchar(255) DEFAULT NULL,
+  `CAPACIDAD` int(11) DEFAULT NULL,
+  `Id_CATEGORIA` int(11) NOT NULL DEFAULT '0',
+  `DETALLE` text,
+  PRIMARY KEY (`ID`,`Id_CATEGORIA`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE `categoria` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NOMBRE` varchar(256) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- 2015-09-19 21:45:15
