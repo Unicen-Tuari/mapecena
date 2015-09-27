@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-21 03:24:30
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-22 22:38:05
          compiled from ".\templates\nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1022755fe52d3a70633-27201242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1442798667,
+      1 => 1442954252,
       2 => 'file',
     ),
   ),
@@ -26,11 +26,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="head-nav">
         <span class="menu"> </span>
           <ul class="cl-effect-16">
-          
-           
-            
-            <li><a href="index.php"  data-hover="INICIO">INICIO</a></li>
-            <li><a href="index.php?action=CABAÑAS"  data-hover="CABAÑAS">CABAÑAS</a></li>
+            <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li>
+            <li><a href="index.php?action=CABANAS"  data-hover="CABAÑAS">CABAÑAS</a></li>
             <li><a href="index.php?action=GALERIA"  data-hover="GALERIA">GALERIA</a></li>
             <li><a href="index.php?action=TARIFAS"  data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
             <li><a href="index.php?action=UBICACION"  data-hover="UBICACION">UBICACION</a></li>

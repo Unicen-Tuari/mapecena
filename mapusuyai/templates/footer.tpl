@@ -1,9 +1,9 @@
 <!-- footer -->
 	<div class="footer">
 		<div class="container">
-			<div class="col-md-6 footer-left">
+			<div class="col-md-4 footer-left">
 				<div class="footer-top">
-					<h6>Compartir con amigos</h6>
+					
 				</div>
 				<div class="social">
 					<ul>
@@ -15,12 +15,14 @@
 				</div>
 					<div class="clearfix"> </div>
 			</div>
-			<div class="col-md-6 footer-right">
-				<p>Copyrights © 2015 Cabañas Mapu Suyai -  Todos los derechos reservados </p>
+			<div class="col-md-4 footer-right"></div>
+			<div class="col-md-4 footer-right">
+				<p>Copyrights © 2015 Cabañas Mapu Suyai </p>
 			</div>
 		</div>
 	</div>
 	</div>
+	
 <!-- footer -->
 </body>
 </html>

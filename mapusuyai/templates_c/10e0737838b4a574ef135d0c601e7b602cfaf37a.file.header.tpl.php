@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-21 03:21:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-27 09:01:33
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:612855dcaaf3764be9-69901058%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1442798515,
+      1 => 1443337191,
       2 => 'file',
     ),
   ),
@@ -27,8 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Wolshino Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -39,7 +38,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        new WOW().init();
     </script>
 <!---- animated-css ----> 
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+<!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> -->
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
@@ -58,5 +58,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
     });
   </script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+    <script type="text/jscript" src="./js/galeria.js"></script>
+   <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />
+  
 </head>
 <body><?php }} ?>

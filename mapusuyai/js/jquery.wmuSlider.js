@@ -25,6 +25,7 @@
             nextText: 'Next',
             touch: false,
             slide: 'article',
+            opacity: 1,
             items: 1
         };
         var options = $.extend(defaults, options);
@@ -101,31 +102,31 @@
         
             /* Navigation Control
             ================================================== */ 
-         if (options.navigationControl) {
-                var prev = $('<a class="wmuSliderPrev">' + options.previousText + '</a>');
-                prev.click(function(e) {
-                    e.preventDefault();
-                    clearTimeout(slideshowTimeout);
-                    if (currentIndex == 0) {
-                        loadSlide(slidesCount - 1, true);
-                    } else {
-                        loadSlide(currentIndex - 1);
-                    }
-                });
-                $this.append(prev);
+         // if (options.navigationControl) {
+         //        var prev = $('<a class="wmuSliderPrev">' + options.previousText + '</a>');
+         //        prev.click(function(e) {
+         //            e.preventDefault();
+         //            clearTimeout(slideshowTimeout);
+         //            if (currentIndex == 0) {
+         //                loadSlide(slidesCount - 1, true);
+         //            } else {
+         //                loadSlide(currentIndex - 1);
+         //            }
+         //        });
+         //        $this.append(prev);
                 
-                var next = $('<a class="wmuSliderNext">' + options.nextText + '</a>');
-                next.click(function(e) {
-                    e.preventDefault();
-                    clearTimeout(slideshowTimeout);
-                    if (currentIndex + 1 == slidesCount) {    
-                        loadSlide(0, true);
-                    } else {
-                        loadSlide(currentIndex + 1);
-                    }
-                });                
-                $this.append(next);
-            }
+         //        var next = $('<a class="wmuSliderNext">' + options.nextText + '</a>');
+         //        next.click(function(e) {
+         //            e.preventDefault();
+         //            clearTimeout(slideshowTimeout);
+         //            if (currentIndex + 1 == slidesCount) {    
+         //                loadSlide(0, true);
+         //            } else {
+         //                loadSlide(currentIndex + 1);
+         //            }
+         //        });                
+         //        $this.append(next);
+         //    }
          
 
             /* Pagination Control
@@ -178,53 +179,53 @@
                         
             /* Touch
             ================================================== */
-            var touchSwipe = function(event, phase, direction, distance) {
-                clearTimeout(slideshowTimeout);              
-                if(phase == 'move' && (direction == 'left' || direction == 'right')) {
-                    if (direction == 'right') {
-                        if (currentIndex == 0) {
-                            wrapper.css('marginLeft', (-slidesCount * $this.width() / options.items) + distance);
-                        } else {
-                            wrapper.css('marginLeft', (-currentIndex * $this.width() / options.items) + distance);
-                        }
-                    } else if (direction == 'left') {
-                        wrapper.css('marginLeft', (-currentIndex * $this.width() / options.items) - distance);
-                    }
-                } else if (phase == 'cancel' ) {
-                    if (direction == 'right' && currentIndex == 0) {
-                        wrapper.animate({ marginLeft: -slidesCount * $this.width() / options.items }, options.animationDuration);                
-                    } else {
-                        wrapper.animate({ marginLeft: -currentIndex * $this.width() / options.items }, options.animationDuration);  
-                    }
-                } else if (phase == 'end' ) {
-                    if (direction == 'right') {
-                        if (currentIndex == 0) {
-                            loadSlide(slidesCount - 1, true, true);
-                        } else {
-                            loadSlide(currentIndex - 1);
-                        }
-                    } else if (direction == 'left')    {        
-                        if (currentIndex + 1 == slidesCount) {
-                            loadSlide(0, true);
-                        } else {
-                            loadSlide(currentIndex + 1);
-                        }
-                    } else {
-                        wrapper.animate({ marginLeft: -currentIndex * $this.width() / options.items }, options.animationDuration);
-                    }
-                }            
-            };
-            if (options.touch && options.animation == 'slide') {
-                if (!$.isFunction($.fn.swipe)) {
-                    $.ajax({
-                        url: 'jquery.touchSwipe.min.js',
-                        async: false
-                    });
-                }
-                if ($.isFunction($.fn.swipe)) {
-                    $this.swipe({ triggerOnTouchEnd:false, swipeStatus:touchSwipe, allowPageScroll:'vertical' });
-                }
-            }
+            // var touchSwipe = function(event, phase, direction, distance) {
+            //     clearTimeout(slideshowTimeout);              
+            //     if(phase == 'move' && (direction == 'left' || direction == 'right')) {
+            //         if (direction == 'right') {
+            //             if (currentIndex == 0) {
+            //                 wrapper.css('marginLeft', (-slidesCount * $this.width() / options.items) + distance);
+            //             } else {
+            //                 wrapper.css('marginLeft', (-currentIndex * $this.width() / options.items) + distance);
+            //             }
+            //         } else if (direction == 'left') {
+            //             wrapper.css('marginLeft', (-currentIndex * $this.width() / options.items) - distance);
+            //         }
+            //     } else if (phase == 'cancel' ) {
+            //         if (direction == 'right' && currentIndex == 0) {
+            //             wrapper.animate({ marginLeft: -slidesCount * $this.width() / options.items }, options.animationDuration);                
+            //         } else {
+            //             wrapper.animate({ marginLeft: -currentIndex * $this.width() / options.items }, options.animationDuration);  
+            //         }
+            //     } else if (phase == 'end' ) {
+            //         if (direction == 'right') {
+            //             if (currentIndex == 0) {
+            //                 loadSlide(slidesCount - 1, true, true);
+            //             } else {
+            //                 loadSlide(currentIndex - 1);
+            //             }
+            //         } else if (direction == 'left')    {        
+            //             if (currentIndex + 1 == slidesCount) {
+            //                 loadSlide(0, true);
+            //             } else {
+            //                 loadSlide(currentIndex + 1);
+            //             }
+            //         } else {
+            //             wrapper.animate({ marginLeft: -currentIndex * $this.width() / options.items }, options.animationDuration);
+            //         }
+            //     }            
+            // };
+            // if (options.touch && options.animation == 'slide') {
+            //     if (!$.isFunction($.fn.swipe)) {
+            //         $.ajax({
+            //             url: 'jquery.touchSwipe.min.js',
+            //             async: false
+            //         });
+            //     }
+            //     if ($.isFunction($.fn.swipe)) {
+            //         $this.swipe({ triggerOnTouchEnd:false, swipeStatus:touchSwipe, allowPageScroll:'vertical' });
+            //     }
+            // }
             
             
             /* Init Slider

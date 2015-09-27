@@ -5,11 +5,8 @@
       <div class="head-nav">
         <span class="menu"> </span>
           <ul class="cl-effect-16">
-          
-           
-            
-            <li><a href="index.php"  data-hover="INICIO">INICIO</a></li>
-            <li><a href="index.php?action=CABAÑAS"  data-hover="CABAÑAS">CABAÑAS</a></li>
+            <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li>
+            <li><a href="index.php?action=CABANAS"  data-hover="CABAÑAS">CABAÑAS</a></li>
             <li><a href="index.php?action=GALERIA"  data-hover="GALERIA">GALERIA</a></li>
             <li><a href="index.php?action=TARIFAS"  data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
             <li><a href="index.php?action=UBICACION"  data-hover="UBICACION">UBICACION</a></li>
