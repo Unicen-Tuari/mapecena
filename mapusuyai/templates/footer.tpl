@@ -23,6 +23,14 @@
 	</div>
 	</div>
 	
+	<script type="text/javascript" src="./js/funciones.js"></script>
+	<script type="text/javascript">
+//cuando la pagina esta lista
+$(function () {
+	$("#{$pagina}").parent().click();//hago click en el boton pasado por parametro
+});
+
+</script>
 <!-- footer -->
 </body>
 </html>

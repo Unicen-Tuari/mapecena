@@ -1,39 +1,44 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-22 22:38:05
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-28 01:33:53
          compiled from ".\templates\nav.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1022755fe52d3a70633-27201242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3126456082609605b09-53187255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1442954252,
+      1 => 1443396817,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1022755fe52d3a70633-27201242',
+  'nocache_hash' => '3126456082609605b09-53187255',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_55fe52d3a71d38_37056048',
+  'unifunc' => 'content_56082609656398_23647465',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55fe52d3a71d38_37056048')) {function content_55fe52d3a71d38_37056048($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_56082609656398_23647465')) {function content_56082609656398_23647465($_smarty_tpl) {?>
 <div class="wrap">
   <div class="header">
-        <div class="container">
+      <div class="container">
       <div class="head-nav">
         <span class="menu"> </span>
-          <ul class="cl-effect-16">
-            <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li>
-            <li><a href="index.php?action=CABANAS"  data-hover="CABAÑAS">CABAÑAS</a></li>
-            <li><a href="index.php?action=GALERIA"  data-hover="GALERIA">GALERIA</a></li>
-            <li><a href="index.php?action=TARIFAS"  data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
-            <li><a href="index.php?action=UBICACION"  data-hover="UBICACION">UBICACION</a></li>
-
+       <!--  <nav id="bs-example-navbar-collapse-1">
+          <ul class="cl-effect-16"> -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li> -->
+            <li><a id="indexAjax" href="#"  data-hover="INICIO">INICIO</a></li>
+            <li><a id="indexAjax" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
+            <li><a id="galeria" href="#" data-hover="GALERIA">GALERIA</a></li>
+            <li><a id="TARIFAS" href="#" data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
+            <li><a id="UBICACION" href="#"  data-hover="UBICACION">UBICACION</a></li>
+            
             <div class="clearfix"> </div>
           </ul>
+          </div>
       </div>
             <!-- script-for-nav -->
           <script>
@@ -49,7 +54,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <p>0249 <span>154123467</span></p>
         </div>
           <div class="logo">
-            <a href="index.php?action=index"><img src="./images/logo.bmp" class="img-responsive" alt="" /></a>
+            <img src="./images/logo.bmp" class="img-responsive" alt="" />
           </div>
           <div class="head-right">
           

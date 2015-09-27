@@ -1,6 +1,5 @@
-{include file="header.tpl" index=1}
-{include file="nav.tpl" }
-<div class="galeria">
+
+<div class="fondo">
     <div class="container">
 <div id="slideshow">
     <div>
@@ -30,5 +29,3 @@
 
 
 
-
-{include file="footer.tpl"}

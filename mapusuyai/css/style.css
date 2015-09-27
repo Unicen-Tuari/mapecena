@@ -10,7 +10,7 @@ p {margin: 0;}
 html,body{
 	font-family: 'Ubuntu', sans-serif;
 	background:#a3aab1;
-	padding:2em 1em;
+	padding:0.5em 1em;
 }
 body a{
     transition:0.5s all;
@@ -156,24 +156,24 @@ ul a:focus {
 }
 
 .banner{
-	background:url(../images/banner1.jpg) no-repeat;
+	background:url(../images/bannerchico.jpg) no-repeat;
 	background-size: 100%;
 	-webkit-background-size:100%; 
 	-moz-background-size:100%;
 	-o-background-size:100%;
 	-ms-background-size:100%;
-	min-height:700px;	
+	/*min-height:700px;	*/
 	text-align:left;
 }
 .fondo{
-	background:url(../images/pruebafondo.png) no-repeat;
-	background-size: 100%;
-	-webkit-background-size:100%; 
-	-moz-background-size:100%;
-	-o-background-size:100%;
-	-ms-background-size:100%;
-	min-height:700px;	
-	text-align:left;
+  background:url(../images/fondo.png) no-repeat;
+  background-size: 100%;
+  -webkit-background-size:100%; 
+  -moz-background-size:100%;
+  -o-background-size:100%;
+  -ms-background-size:100%;
+  /*min-height:700px;*/
+  text-align:left;
 }
 .banner-info {
 	padding: 14em 0 23em;
@@ -2042,5 +2042,11 @@ padding: 0em 0 3em;
 #presentacion{
 	text-align: left;
 	color: #99CC66;
-	
+
+}
+
+
+.reborde {
+-webkit-text-fill-color: yellowgreen;
+-webkit-text-stroke: 1px grey;
 }

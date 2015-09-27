@@ -21,13 +21,13 @@ img {
   bottom: 10px;
   
   }
-  .galeria{
+/*  .galeria{
   background:url(../images/fondo.png) no-repeat;
   background-size: 100%;
   -webkit-background-size:100%; 
   -moz-background-size:100%;
   -o-background-size:100%;
   -ms-background-size:100%;
-  /*min-height:700px; */
+  min-height:700px;
   text-align:left;
-}
+} */
