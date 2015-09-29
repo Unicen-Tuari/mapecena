@@ -7,9 +7,9 @@
 				</div>
 				<div class="social">
 					<ul>
-						<li><a href="#"><i class="pho"> </i></a></li>
-						<li><a href="#"><i class="twiter"> </i></a></li>
-						<li><a href="#"><i class="facebok"> </i></a></li>
+						<li><a href="instagram.com"><i class="pho"> </i></a></li>
+						<li><a href="twiiter.com"><i class="twiter"> </i></a></li>
+						<li><a href="facebook.com"><i class="facebok"> </i></a></li>
 							<div class="clearfix"></div>	
 					</ul>
 				</div>
@@ -23,14 +23,6 @@
 	</div>
 	</div>
 	
-<!--	<script type="text/javascript" src="./js/funciones.js"></script>
-	<script type="text/javascript">
-//cuando la pagina esta lista
-$(function () {
-	$("#{$pagina}").parent().click();//hago click en el boton pasado por parametro
-});
 
-</script>
-<!-- footer -->
 </body>
 </html>

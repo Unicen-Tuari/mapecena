@@ -19,27 +19,27 @@
                             
                             <div class="form-group col-lg-12">
                                 <label>Nombre de la Cabaña:</label>
-                                <input name="NOMBRE" type="text" class="form-control">
+                                <input name="NOMBRE" type="text" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label> Categoria: </label>
-                                <input name="ID_CATEGORIA" type="number" class="form-control">
+                                <input name="ID_CATEGORIA" type="number" min="1" max="5" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Capacidad: </label>
-                                <input name="CAPACIDAD" type="number" class="form-control">
+                                <input name="CAPACIDAD" type="number" min="1" max="5" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label> Precio: </label>
-                                <input name="PRECIO" type="number" class="form-control">
+                                <input name="PRECIO" type="number" min="1000" max="100000"class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
-                                <label>Ruta Imagen: </label>
-                                <input name="URL_IMG" type="text" class="form-control" rows="6">
+                                <label>Imagen: </label>
+                                <input name="URL_IMG" type="file" accept="image/*" class="form-control" rows="6"required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Descripci&oacute;n: </label>
-                                <textarea rows="6" cols="60" name="DETALLE" type="text" class="form-control" rows="6"></textarea>
+                                <textarea rows="6" cols="60" name="DETALLE" type="text" class="form-control" rows="6" required></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">

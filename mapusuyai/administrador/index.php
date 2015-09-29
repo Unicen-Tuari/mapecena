@@ -1,6 +1,5 @@
 <?php
 
-
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 	
@@ -13,9 +12,9 @@ ini_set("display_errors", 1);
 		include "./controladores/controladorCabana.php";
 		$c = new CabanaController();
 		$c->insertarCabana();
-		$controller = new CabanaController();
-		$controller->vistaAgregarCab();
+		
 	}else{	
 		echo "ERROR ACCION NO VALIDA";
 	}
+	
 ?>

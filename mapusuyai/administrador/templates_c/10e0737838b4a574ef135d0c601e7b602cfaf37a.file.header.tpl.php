@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 05:34:51
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 07:21:59
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:333054716d8fb129a0-42126079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20282560a1ff7ab1d14-85557657%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '333054716d8fb129a0-42126079',
+  'nocache_hash' => '20282560a1ff7ab1d14-85557657',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54716d8fb200e2_51859945',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560a1ff7af4805_48407593',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8fb200e2_51859945')) {function content_54716d8fb200e2_51859945($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_560a1ff7af4805_48407593')) {function content_560a1ff7af4805_48407593($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
 <title>Wolshino  A Hotel Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>

@@ -1,29 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 06:45:55
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 09:10:46
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:827254716d8fb75ce7-72754745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:31048560a1ff7b26400-67517347%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1443501925,
+      1 => 1443510597,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '827254716d8fb75ce7-72754745',
+  'nocache_hash' => '31048560a1ff7b26400-67517347',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54716d8fb7b0d0_78800603',
-  'variables' => 
-  array (
-    'pagina' => 0,
-  ),
+  'unifunc' => 'content_560a1ff7bb3a05_17452622',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8fb7b0d0_78800603')) {function content_54716d8fb7b0d0_78800603($_smarty_tpl) {?><!-- footer -->
+<?php if ($_valid && !is_callable('content_560a1ff7bb3a05_17452622')) {function content_560a1ff7bb3a05_17452622($_smarty_tpl) {?><!-- footer -->
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-4 footer-left">
@@ -32,9 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 				<div class="social">
 					<ul>
-						<li><a href="#"><i class="pho"> </i></a></li>
-						<li><a href="#"><i class="twiter"> </i></a></li>
-						<li><a href="#"><i class="facebok"> </i></a></li>
+						<li><a href="instagram.com"><i class="pho"> </i></a></li>
+						<li><a href="twiiter.com"><i class="twiter"> </i></a></li>
+						<li><a href="facebook.com"><i class="facebok"> </i></a></li>
 							<div class="clearfix"></div>	
 					</ul>
 				</div>
@@ -48,15 +44,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</div>
 	</div>
 	
-<!--	<script type="text/javascript" src="./js/funciones.js"></script>
-	<script type="text/javascript">
-//cuando la pagina esta lista
-$(function () {
-	$("#<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
-").parent().click();//hago click en el boton pasado por parametro
-});
 
-</script>
-<!-- footer -->
 </body>
 </html><?php }} ?>
