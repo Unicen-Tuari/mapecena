@@ -156,7 +156,7 @@ ul a:focus {
 }
 
 .banner{
-	background:url(../images/bannerchico.jpg) no-repeat;
+	background:url(../images/banner.png) no-repeat;
 	background-size: 100%;
 	-webkit-background-size:100%; 
 	-moz-background-size:100%;
@@ -2049,4 +2049,8 @@ padding: 0em 0 3em;
 .reborde {
 -webkit-text-fill-color: yellowgreen;
 -webkit-text-stroke: 1px grey;
+}
+
+.tabla{
+	text-align: center;
 }

@@ -16,12 +16,17 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
     $c = new IndexController();
     $c->actionIndexAjax();
   }
-    if($_REQUEST['action']=='galeria')
+  else if($_REQUEST['action']=='GALERIA')
     {
       include "./controladores/controladorGaleria.php";
       $c = new galeriaController();
       $c->actionGaleria();
     }
+    else if($_REQUEST['action']=='TARIFAS'){
+        include "./controladores/controladorCabana.php";
+        $c = new cabanaController();
+        $c->actionTarifas();
+      }
 //     else 
 //       if($_REQUEST['action']=='CABANAS')
 //     {
@@ -29,10 +34,10 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
 //       $c = new cabanaController();
 //       $c->actionCabana();
 //     }
-    // else 
-    //   {
-    //     echo "ERROR ACCION NO VALIDA";
-    //   }
+    else 
+      {
+        echo "ERROR ACCION NO VALIDA";
+      }
 
 
 ?>

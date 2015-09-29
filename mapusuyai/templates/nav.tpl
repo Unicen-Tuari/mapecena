@@ -10,8 +10,8 @@
             <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li> -->
             <li><a id="indexAjax" href="#"  data-hover="INICIO">INICIO</a></li>
-            <li><a id="indexAjax" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
-            <li><a id="galeria" href="#" data-hover="GALERIA">GALERIA</a></li>
+            <li><a id="CABAÑAS" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
+            <li><a id="GALERIA" href="#" data-hover="GALERIA">GALERIA</a></li>
             <li><a id="TARIFAS" href="#" data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
             <li><a id="UBICACION" href="#"  data-hover="UBICACION">UBICACION</a></li>
             

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-27 19:23:21
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 20:08:44
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13603560826095e0041-99772229%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1443337191,
+      1 => 1443549518,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_560826095eff18_00643104',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_560826095eff18_00643104')) {function content_560826095eff18_00643104($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
@@ -27,6 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="images/icono.png" />
+<link rel="icon" href="images/icono.png" type="image/x-icon" />
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
@@ -60,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </script>
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
     <script type="text/jscript" src="./js/galeria.js"></script>
-   <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />
-  
+    <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/w3.css" type="text/css" media="all">  
 </head>
 <body><?php }} ?>

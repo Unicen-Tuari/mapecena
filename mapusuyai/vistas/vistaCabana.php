@@ -9,6 +9,9 @@ class cabanaView extends View{
 		$this->smarty->display('cabana.tpl');
 	}	
 
+	function renderTarifas(){
+		$this->smarty->display('Tarifas.tpl');
+	}
 	
 }
 
