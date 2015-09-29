@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-28 01:33:53
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 05:49:47
          compiled from ".\templates\nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3126456082609605b09-53187255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1443396817,
+      1 => 1443498582,
       2 => 'file',
     ),
   ),
@@ -40,15 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </ul>
           </div>
       </div>
-            <!-- script-for-nav -->
-          <script>
-            $( "span.menu" ).click(function() {
-              $( ".head-nav ul" ).slideToggle(300, function() {
-              // Animation complete.
-              });
-            });
-          </script>
-        <!-- script-for-nav -->           
+         
       <div class="header-bottom">
         <div class="head-left">
           <p>0249 <span>154123467</span></p>

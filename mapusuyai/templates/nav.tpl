@@ -19,15 +19,7 @@
           </ul>
           </div>
       </div>
-            <!-- script-for-nav -->
-          <script>
-            $( "span.menu" ).click(function() {
-              $( ".head-nav ul" ).slideToggle(300, function() {
-              // Animation complete.
-              });
-            });
-          </script>
-        <!-- script-for-nav -->           
+         
       <div class="header-bottom">
         <div class="head-left">
           <p>0249 <span>154123467</span></p>
