@@ -1,6 +1,6 @@
 <?php
 
-  // require('lib/smarty/Smarty.class.php');
+
   error_reporting(E_ALL);
   ini_set("display_errors", 1);
 
@@ -43,6 +43,7 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
   {
     include "./controladores/controladorCabana.php";
     $c = new cabanaController();
+ 
     if(array_key_exists('idCat', $_GET))
         {
           $c->actioncabanaseguncategoria($_GET['idCat']);              

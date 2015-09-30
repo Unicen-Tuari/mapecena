@@ -2,7 +2,7 @@
     <div class="container">        
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+
                        <div class="row">
 
                             <div class="btn-group" >
@@ -12,7 +12,7 @@
                                 <ul class="dropdown-menu" >
                                     {foreach key=id_categ item=categoria from=$categorias}
                                         <li>
-                                        <a href="index.php?action=CATEGORIA&amp;idCat={utf8_encode($categoria['ID_CATEGORIA'])}">{utf8_encode($categoria['NOMBRE'])}</a></li>
+                                        <a href="index.php?action=CATEGORIA&idCat={utf8_encode($categoria['ID_CATEGORIA'])}">{utf8_encode($categoria['NOMBRE'])}</a></li>
                                         
                                     {/foreach}
                                 </ul>
@@ -57,13 +57,13 @@
                                     {if $clave eq 'URL_IMG'}
                                         <div class="row">
                                             <div class="col-md-3"></div>
-                                            <div class="col-md-6">
-                                                <li class="img-responsive img-border img-full"><img class="img-responsive img-border img-full" src="{$cabana['URL_IMG']}" alt=""></li>
+                                            <div class="col-md-6 ">
+                                                <li class="img-responsive img-border img-full "><img class="img-responsive img-border img-full " src="{$cabana['URL_IMG']}" alt=""></li>
                                                 </div>
                                             <div class="col-md-3"></div>
                                         </div>
                                     {elseif $clave eq 'DETALLE' }
-                                        <p><li >{utf8_encode($clave)}: {utf8_encode($valor)}</li><p><hr>
+                                        <p><li >{utf8_encode($valor)}</li><p><hr>
                                     {elseif ($clave eq 'ID_CABANA') or ($clave eq 'ID_CATEGORIA') }<li></li>
                                     {elseif ($clave eq 'NOMBRE') }
                                     <H2><li>{utf8_encode($valor)}</li></H2>
@@ -80,7 +80,7 @@
 
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
 

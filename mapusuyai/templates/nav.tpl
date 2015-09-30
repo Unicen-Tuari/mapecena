@@ -4,11 +4,10 @@
       <div class="container">
       <div class="head-nav">
         <span class="menu"> </span>
-       <!--  <nav id="bs-example-navbar-collapse-1">
-          <ul class="cl-effect-16"> -->
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li> -->
+
             <li><a id="indexAjax" href=""  data-hover="INICIO">INICIO</a></li>
             <!-- <li ><a id="CABANAS" href="#" data-hover="CABANAS" >CABAÑAS</a></li> -->
             <li><a id="CATEGORIA" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>

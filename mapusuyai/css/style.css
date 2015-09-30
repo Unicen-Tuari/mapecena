@@ -2054,3 +2054,7 @@ padding: 0em 0 3em;
 .tabla{
 	text-align: center;
 }
+
+.imgCabanas{
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+}

@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 10:34:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:02:15
          compiled from ".\templates\porcategoria.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18676560b972a69fad3-28900496%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8052560c3fc7447092-23919300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bfaf0a36a258c79dcbb64a3258cd4d4216cfc651' => 
     array (
       0 => '.\\templates\\porcategoria.tpl',
-      1 => 1443602026,
+      1 => 1443642423,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18676560b972a69fad3-28900496',
+  'nocache_hash' => '8052560c3fc7447092-23919300',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560b972a7e7c34_89959470',
   'variables' => 
   array (
     'categorias' => 0,
@@ -27,12 +25,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'valor' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560c3fc7627b15_79866706',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560b972a7e7c34_89959470')) {function content_560b972a7e7c34_89959470($_smarty_tpl) {?><div class="fondo">
+<?php if ($_valid && !is_callable('content_560c3fc7627b15_79866706')) {function content_560c3fc7627b15_79866706($_smarty_tpl) {?><div class="fondo">
     <div class="container">        
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+
                        <div class="row">
 
                             <div class="btn-group" >
@@ -48,7 +48,7 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
  $_smarty_tpl->tpl_vars['id_categ']->value = $_smarty_tpl->tpl_vars['categoria']->key;
 ?>
                                         <li>
-                                        <a href="index.php?action=CATEGORIA&amp;idCat=<?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value['ID_CATEGORIA']);?>
+                                        <a href="index.php?action=CATEGORIA&idCat=<?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value['ID_CATEGORIA']);?>
 "><?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value['NOMBRE']);?>
 </a></li>
                                         
@@ -119,15 +119,14 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
                                     <?php if ($_smarty_tpl->tpl_vars['clave']->value=='URL_IMG'){?>
                                         <div class="row">
                                             <div class="col-md-3"></div>
-                                            <div class="col-md-6">
-                                                <li class="img-responsive img-border img-full"><img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
+                                            <div class="col-md-6 ">
+                                                <li class="img-responsive img-border img-full "><img class="img-responsive img-border img-full " src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
 " alt=""></li>
                                                 </div>
                                             <div class="col-md-3"></div>
                                         </div>
                                     <?php }elseif($_smarty_tpl->tpl_vars['clave']->value=='DETALLE'){?>
-                                        <p><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['clave']->value);?>
-: <?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
+                                        <p><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
 </li><p><hr>
                                     <?php }elseif(($_smarty_tpl->tpl_vars['clave']->value=='ID_CABANA')||($_smarty_tpl->tpl_vars['clave']->value=='ID_CATEGORIA')){?><li></li>
                                     <?php }elseif(($_smarty_tpl->tpl_vars['clave']->value=='NOMBRE')){?>
@@ -148,7 +147,7 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
 
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
 

@@ -5,6 +5,5 @@
 
 {include file="footer.tpl" pagina=indexAjax}
 
-<!-- tengo que hacer un tpl nuevo solo con contenido sin header y sin footer-->
 
 

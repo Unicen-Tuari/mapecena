@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 06:08:37
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 21:16:37
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20282560a1ff7ab1d14-85557657%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1443586093,
+      1 => 1443586387,
       2 => 'file',
     ),
   ),
@@ -29,38 +29,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>-->
+
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-<!---- animated-css 
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-    <script>
-       new WOW().init();
-    </script>
- animated-css ----> 
 
-<!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> -->
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-<!--<script>
-//     $(document).ready(function() {
-//     $('.popup-with-zoom-anim').magnificPopup({
-//     type: 'inline',
-//     fixedContentPos: false,
-//     fixedBgPos: true,
-//     overflowY: 'auto',
-//     closeBtnInside: true,
-//     preloader: false,
-//     midClick: true,
-//     removalDelay: 300,
-//     mainClass: 'my-mfp-zoom-in'
-//     });
-//     });
-//   </script>-->
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/jscript" src="./js/funciones.js"></script>
 	<link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />

@@ -24,22 +24,7 @@
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-<!--
-<script>
-    $(document).ready(function() {
-    $('.popup-with-zoom-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-    });
-    });
-  </script>-->
+
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/jscript" src="./js/galeria.js"></script>
     <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />

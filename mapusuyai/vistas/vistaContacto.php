@@ -8,13 +8,7 @@ class ContactoView extends View{
 		$this->smarty->display('contacto.tpl');
 	}	
 
-	function set_contacto($arrCont){
-		$this->smarty->assign("contacto",$arrCont);		
-	}
-
-	function renderContacto(){
-		$this->smarty->display('contacto.tpl');
-	}	
+	
 }
 
 ?>

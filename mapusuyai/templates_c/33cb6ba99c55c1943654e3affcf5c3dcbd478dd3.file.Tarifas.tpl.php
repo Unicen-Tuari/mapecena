@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 21:35:10
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:02:17
          compiled from ".\templates\Tarifas.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19485560ad3e969a7d8-29589527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17682560c3fc9b22ec6-96113775%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19485560ad3e969a7d8-29589527',
+  'nocache_hash' => '17682560c3fc9b22ec6-96113775',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560ad3e977e867_30684158',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560c3fc9b4ee03_03805432',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560ad3e977e867_30684158')) {function content_560ad3e977e867_30684158($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_560c3fc9b4ee03_03805432')) {function content_560c3fc9b4ee03_03805432($_smarty_tpl) {?>
 <div class="fondo">
     <div class="container">
     	<h2>Tarifas</h2>

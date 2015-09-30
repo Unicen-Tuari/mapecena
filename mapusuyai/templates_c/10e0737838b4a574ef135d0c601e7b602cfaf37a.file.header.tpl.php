@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 10:28:03
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:02:13
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13603560826095e0041-99772229%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3780560c3fc5e33c63-83588489%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1443601677,
+      1 => 1443643298,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13603560826095e0041-99772229',
+  'nocache_hash' => '3780560c3fc5e33c63-83588489',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560826095eff18_00643104',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560c3fc5e3ad68_77747025',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560826095eff18_00643104')) {function content_560826095eff18_00643104($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_560c3fc5e3ad68_77747025')) {function content_560c3fc5e3ad68_77747025($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
 <title>Cabañas Mapu Suyai</title>
@@ -45,22 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-<!--
-<script>
-    $(document).ready(function() {
-    $('.popup-with-zoom-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-    });
-    });
-  </script>-->
+
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/jscript" src="./js/galeria.js"></script>
     <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />

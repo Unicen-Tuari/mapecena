@@ -22,9 +22,10 @@ class cabanaView extends View{
 		
 		$this->smarty->assign("cabanas",$arrCab);
 	}
-
-	function set_categoria($arrCat){
+			 
+	function set_categoria($arrCat,$arrCab){
 		$this->smarty->assign("categorias",$arrCat);
+		$this->smarty->assign("cabanas",$arrCab);
 		
 	}
 }

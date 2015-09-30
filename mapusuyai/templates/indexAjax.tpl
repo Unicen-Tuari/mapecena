@@ -15,29 +15,6 @@
 
 </div>
 </article>
-            <!-- <h1>Titulo 1 </h1>
-            <a href="#" class="meet wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Entrar</a>
-          </div> -->
-          
-        
-
-        <!--  <article style="position: absolute; width: 100%; opacity: 0;"> 
-              <div class="banner-info">
-            <h1>Titulo 2 </h1>
-            <a href="#" class="meet wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Acceder</a>
-          </div>
-        </article>
-         <article style="position: absolute; width: 100%; opacity: 0;"> 
-              <div class="banner-info">
-            <h1>Titulo 3</h1>
-            <a href="#" class="meet wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Ir</a>
-          </div>
-        </article> -->
-       <!--  <ul class="wmuSliderPagination">
-                  <li><a href="#" class="">00000000000</a></li>
-                  <li><a href="#" class="">11111111</a></li>
-                  <li><a href="#" class="">222222222</a></li>
-                </ul> -->
       </div>    
      
           <script src="js/jquery.wmuSlider.js"></script> 

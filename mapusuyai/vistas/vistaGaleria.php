@@ -8,13 +8,7 @@ class galeriaView extends View{
 		$this->smarty->display('galeria.tpl');
 	}	
 
-	// function set_contacto($arrCont){
-	// 	$this->smarty->assign("contacto",$arrCont);		
-	// }
 
-	// function renderContacto(){
-	// 	$this->smarty->display('contacto.tpl');
-	// }	
 }
 
 ?>

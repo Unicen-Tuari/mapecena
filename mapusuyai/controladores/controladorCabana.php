@@ -19,10 +19,12 @@ class cabanaController{
 		$view = new CabanaView;
 		$categMod = new cabanaModel;
 		$arrCat = $categMod->todasCategorias();
+		
 		$arrCab = $cabMod->todasLasCabanasSegunCategoria($categoria);
-		var_dump($arrCab);
-		$view->set_categoria($arrCat);
-		$view->set_cabanas($arrCab);
+		// var_dump($arrCab);
+		// var_dump($arrCat);
+		$view->set_categoria($arrCat,$arrCab);
+		// $view->set_cabanas($arrCab);
 		$view->rendercabanaSegunCategoria();
 
 	}
@@ -33,8 +35,10 @@ class cabanaController{
 		$categMod = new cabanaModel;
 		$arrCat = $categMod->todasCategorias();
 		$arrCab = $cabMod->todasLasCabanas();
-		$view->set_categoria($arrCat);
-		$view->set_cabanas($arrCab);
+		$view->set_categoria($arrCat,$arrCab);
+		// var_dump($arrCab);
+		// var_dump($arrCat);
+		// $view->set_cabanas($arrCab);
 		$view->rendercabanaSegunCategoria();
 
 	}

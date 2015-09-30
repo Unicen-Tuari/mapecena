@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 06:08:37
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 21:16:37
          compiled from ".\templates\agregarCab.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9829560a1ff7911488-42471965%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2f83478f6afe5f1c90bfbe35193505281bc10d9a' => 
     array (
       0 => '.\\templates\\agregarCab.tpl',
-      1 => 1443586019,
+      1 => 1443586415,
       2 => 'file',
     ),
   ),
@@ -76,50 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
 </div>
 
-<script>
-      // $("#btn-enviar").on("click", function(event){
-      //   event.preventDefault();
-
-      //   var archivos = $("#input-imagen").prop('files');
-
-      //   if(typeof(archivos) == 'undefined'){
-      //     mostrarMensaje("No pusiste imagenes");
-      //     return;
-      //   }
-
-      //   var datos = new FormData();
-
-      //   $.each(archivos, function(key,value){
-      //     datos.append(key,value);
-      //   });
-
-      //   var inputs = $("#miform").serializeArray();
-
-      //   $.each(inputs, function(i, objeto){
-      //     datos.append(objeto.name,objeto.value);
-      //   });
-
-      //   $.ajax({
-      //     type: "POST",
-      //     dataType: "html",
-      //     url: $("#miform").attr("action"),
-      //     data: datos,
-      //     success: function(data){
-      //       // console.log(data);
-      //       // alert(data.result);
-      //       // alert(data.result);
-      //       window.location.href = "index.php?action=finCarga";
-
-      //     },
-      //     error: function(data){
-      //       window.location.href = "index.php?action=errorCarga";
-      //     },
-      //     contentType : false,
-      //     processData : false
-      //   });
-
-      // });
-    </script>
 
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>
