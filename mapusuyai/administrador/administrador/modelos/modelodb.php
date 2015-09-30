@@ -34,6 +34,7 @@ abstract class ModeloDB{
 		catch(PDOException $pe){
 			die('Error de conexion, Mensaje: ' .$pe->getMessage());
 		}
+		mysql_query ("SET NAMES 'utf8'");
 		$this->conn = $conn;
 		return $conn;
 	}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 09:01:58
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 05:55:06
          compiled from ".\templates\agregarCab.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9829560a1ff7911488-42471965%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2f83478f6afe5f1c90bfbe35193505281bc10d9a' => 
     array (
       0 => '.\\templates\\agregarCab.tpl',
-      1 => 1443510110,
+      1 => 1443585303,
       2 => 'file',
     ),
   ),
@@ -35,9 +35,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <hr>
                     <h2 class="intro-text text-center"><strong>Nueva Cabaña</strong></h2>
                     <hr>
-                        <!-- $NOMBRE,$ID_CATEGORIA,$CAPACIDAD,
-                        $URL_IMG,$PRECIO,$DETALLE -->
-                    <form role="form" action="index.php?action=insertarCab" method="POST"> <!-- enctype="multipart/form-data" -->
+                       
+                    <form id="miform" role="form" action="index.php?action=insertarCab" method="POST"> 
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -58,7 +57,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Imagen: </label>
-                                <input name="URL_IMG" type="file" accept="image/*" class="form-control" rows="6"required>
+                                <input id="input-imagen" name="URL_IMG" type="file" accept="image/*" class="form-control" rows="6"required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Descripci&oacute;n: </label>
@@ -66,7 +65,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Agregar</button>
+                                <button id="btn-enviar" type="submit" class="btn btn-default">Agregar</button>
                             </div>
                         </div>
                     </form>
@@ -76,6 +75,51 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </div>
 </div>
+
+<script>
+      $("#btn-enviar").on("click", function(event){
+        event.preventDefault();
+
+        var archivos = $("#input-imagen").prop('files');
+
+        if(typeof(archivos) == 'undefined'){
+          mostrarMensaje("No pusiste imagenes");
+          return;
+        }
+
+        var datos = new FormData();
+
+        $.each(archivos, function(key,value){
+          datos.append(key,value);
+        });
+
+        var inputs = $("#miform").serializeArray();
+
+        $.each(inputs, function(i, objeto){
+          datos.append(objeto.name,objeto.value);
+        });
+
+        $.ajax({
+          type: "POST",
+          dataType: "html",
+          url: $("#miform").attr("action"),
+          data: datos,
+          success: function(data){
+            // console.log(data);
+            // alert(data.result);
+            // alert(data.result);
+            window.location.href = "index.php?action=finCarga";
+
+          },
+          error: function(data){
+            window.location.href = "index.php?action=errorCarga";
+          },
+          contentType : false,
+          processData : false
+        });
+
+      });
+    </script>
 
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

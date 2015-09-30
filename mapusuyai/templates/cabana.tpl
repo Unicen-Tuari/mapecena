@@ -1,42 +1,43 @@
-{include file="header.tpl" index=1}
-{include file="nav.tpl" }
-<div class="container">
-
+<div class="fondo">
+    <div class="container">        
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center"><strong>Cabañas</strong></h2>
-                    <hr>
-                </div>
-                {foreach key=id_maquina item=maquina from=$maquinas}
-                <div class="col-lg-12 text-center">                    
+                       <div class="row">
+                            <div class="box">
+                                <div class="col-lg-12">
+                                    <hr>
+                                    <h2 class="intro-text text-center"><strong>Cabañas</strong></h2>
+                                    <hr>
+                                </div>
+                                {foreach key=cabana item=cabana from=$cabanas}
+                                <div class="col-lg-12 text-center">                    
+                                    <img class="img-responsive img-border img-full" src="{$cabana['URL_IMG']}" alt="">
+                                    <h2>{$cabana['NOMBRE']}
+                                        <br>
+                                        <small><h4>Capacidad: {utf8_encode($cabana['CAPACIDAD'])}</h4></small>
+                                        <small><h4>Precio: {$cabana['PRECIO']}</h4></small>
+                                    </h2>
+                                    <p>{utf8_encode($cabana['DETALLE'])}</p>
+                                
 
-                    <img class="img-responsive img-border img-full" src="{$maquina['Ruta']}" alt="">
-                    <h2>{$maquina['Nombre']}
-                        <br>
-                        <small><h4>Modelo: {utf8_encode($maquina['Modelo'])}</h4></small>
-                        <small><h4>Tipo: {$maquina['Tipo']}</h4></small>
-                        <small><h4>Precio: {$maquina['Precio']}</h4></small>
-                    </h2>
-                    <p>{utf8_encode($maquina['Texto'])}</p>
-                    <a href="index.php?action=carouselMaq&amp;id={$maquina['id_Contenido']}&amp;estado={$maquina['estado']}" class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
-                    <hr>
-                </div>
-                {/foreach}
-                
-                <div class="col-lg-12 text-center">
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Anterior</a>
-                        </li>
-                        <li class="next"><a href="#">Siguiente &rarr;</a>
-                        </li>
-                    </ul>
+                                    <hr>
+                                </div>
+                                {/foreach}
+                                
+                                <div class="col-lg-12 text-center">
+                                    <ul class="pager">
+                                        <li class="previous"><a href="#">&larr; Anterior</a>
+                                        </li>
+                                        <li class="next"><a href="#">Siguiente &rarr;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <!-- /.container -->
-
-{include file = "footer.tpl"}
+</div>

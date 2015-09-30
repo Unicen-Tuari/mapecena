@@ -27,13 +27,20 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
         $c = new cabanaController();
         $c->actionTarifas();
       }
-//     else 
-//       if($_REQUEST['action']=='CABANAS')
-//     {
-//       include "./controladores/controladorCabana.php";
-//       $c = new cabanaController();
-//       $c->actionCabana();
-//     }
+    else 
+      if($_REQUEST['action']=='CABANAS')
+    {
+      include "./controladores/controladorCabana.php";
+      $c = new cabanaController();
+      $c->actionCabana();
+    }
+      else 
+      if($_REQUEST['action']=='CONTACTO')
+    {
+      include "./controladores/controladorContacto.php";
+      $c = new ContactoController();
+      $c->actionContacto();
+    }
     else 
       {
         echo "ERROR ACCION NO VALIDA";

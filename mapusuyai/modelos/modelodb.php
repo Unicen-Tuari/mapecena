@@ -16,7 +16,7 @@ abstract class ModeloDB{
 	private $user = 'root';
 	private $pass = '';
 	private $host = 'localhost';
-	private $db = 'campoactivo';
+	private $db = 'mapusuyai';
 	protected $conn = null;
 	
 	protected abstract function load();

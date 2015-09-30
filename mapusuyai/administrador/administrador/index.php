@@ -13,6 +13,15 @@ ini_set("display_errors", 1);
 		$c = new CabanaController();
 		$c->insertarCabana();
 		
+	}else if($_REQUEST['action']=='finCarga'){
+		include "./controladores/controladorCabana.php";
+		$c = new CabanaController();
+		$c->finCarga();
+
+	}else if($_REQUEST['action']=='errorCarga'){
+		include "./controladores/controladorCabana.php";
+		$c = new CabanaController();
+		$c->errorCarga();
 	}else{	
 		echo "ERROR ACCION NO VALIDA";
 	}

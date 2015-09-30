@@ -12,9 +12,8 @@
                     <hr>
                     <h2 class="intro-text text-center"><strong>Nueva Cabaña</strong></h2>
                     <hr>
-                        <!-- $NOMBRE,$ID_CATEGORIA,$CAPACIDAD,
-                        $URL_IMG,$PRECIO,$DETALLE -->
-                    <form role="form" action="index.php?action=insertarCab" method="POST"> <!-- enctype="multipart/form-data" -->
+                       
+                    <form id="miform" role="form" action="index.php?action=insertarCab" method="POST"> 
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -35,7 +34,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Imagen: </label>
-                                <input name="URL_IMG" type="file" accept="image/*" class="form-control" rows="6"required>
+                                <input id="input-imagen" name="URL_IMG" type="file" accept="image/*" class="form-control" rows="6"required>
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Descripci&oacute;n: </label>
@@ -43,7 +42,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Agregar</button>
+                                <button id="btn-enviar" type="submit" class="btn btn-default">Agregar</button>
                             </div>
                         </div>
                     </form>
@@ -53,5 +52,50 @@
 
     </div>
 </div>
+
+<script>
+      $("#btn-enviar").on("click", function(event){
+        event.preventDefault();
+
+        var archivos = $("#input-imagen").prop('files');
+
+        if(typeof(archivos) == 'undefined'){
+          mostrarMensaje("No pusiste imagenes");
+          return;
+        }
+
+        var datos = new FormData();
+
+        $.each(archivos, function(key,value){
+          datos.append(key,value);
+        });
+
+        var inputs = $("#miform").serializeArray();
+
+        $.each(inputs, function(i, objeto){
+          datos.append(objeto.name,objeto.value);
+        });
+
+        $.ajax({
+          type: "POST",
+          dataType: "html",
+          url: $("#miform").attr("action"),
+          data: datos,
+          success: function(data){
+            // console.log(data);
+            // alert(data.result);
+            // alert(data.result);
+            window.location.href = "index.php?action=finCarga";
+
+          },
+          error: function(data){
+            window.location.href = "index.php?action=errorCarga";
+          },
+          contentType : false,
+          processData : false
+        });
+
+      });
+    </script>
 
 {include file = "footer.tpl"}

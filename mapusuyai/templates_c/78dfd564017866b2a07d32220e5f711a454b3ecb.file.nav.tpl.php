@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 20:09:43
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 00:01:20
          compiled from ".\templates\nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3126456082609605b09-53187255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1443550179,
+      1 => 1443563982,
       2 => 'file',
     ),
   ),
@@ -31,10 +31,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li> -->
             <li><a id="indexAjax" href="#"  data-hover="INICIO">INICIO</a></li>
-            <li><a id="CABAÑAS" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
+            <li><a id="CABANAS" href="#" data-hover="CABANAS">CABAÑAS</a></li>
             <li><a id="GALERIA" href="#" data-hover="GALERIA">GALERIA</a></li>
             <li><a id="TARIFAS" href="#" data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
-            <li><a id="UBICACION" href="#"  data-hover="UBICACION">UBICACION</a></li>
+            <li><a id="CONTACTO" href="#"  data-hover="CONTACTO">CONTACTO</a></li>
             
             <div class="clearfix"> </div>
           </ul>

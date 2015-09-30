@@ -21,6 +21,17 @@ class CabanaController
 		$this->view->nuevaCabana();
 	}
 
+	
+	public function finCarga()
+	{
+		$this->view->finCargaCabana();
+	}
+
+	public function errorCarga()
+	{
+		$this->view->errorCargaCabana();
+	}
+
 	public function insertarCabana()
 	{
 		
@@ -32,18 +43,17 @@ class CabanaController
 		$NOMBRE = $_REQUEST['NOMBRE'];
 		$ID_CATEGORIA = $_REQUEST['ID_CATEGORIA'];
 		$CAPACIDAD = $_REQUEST['CAPACIDAD'];
-		$URL_IMG = $urlDefault.$_REQUEST['URL_IMG'];
+		$URL_IMG = $urlDefault.$_FILES[0]['name'];
+		
 		$PRECIO = $_REQUEST['PRECIO'];
 		$DETALLE = $_REQUEST['DETALLE'];		
 
 		$arrCab = $this->modeloCabanas->insertarContenidoCab($NOMBRE,$ID_CATEGORIA,$CAPACIDAD,
 						$URL_IMG,$PRECIO,$DETALLE);
 
-		if(isset($arrCab)){
-			$this->view->finCargaCabana();
-		}else{
-			$this->view->errorCargaCabana();
-		}		
+		// echo '{ "result" :  "OK" }';
+		return;
+			
 	}
 }
 
