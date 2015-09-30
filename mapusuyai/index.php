@@ -43,7 +43,8 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
   {
     include "./controladores/controladorCabana.php";
     $c = new cabanaController();
- 
+    // $c->actioncabanaseguncategoria($_GET['idCat']);   
+    // $c->actioncabanaseguncategoria(2);   
     if(array_key_exists('idCat', $_GET))
         {
           $c->actioncabanaseguncategoria($_GET['idCat']);              

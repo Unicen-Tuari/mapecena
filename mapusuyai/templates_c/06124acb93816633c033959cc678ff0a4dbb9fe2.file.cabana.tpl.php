@@ -1,60 +1,37 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 23:46:03
-         compiled from ".\templates\porcategoria.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8851560c4ce4c8bd03-19010370%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 23:06:17
+         compiled from ".\templates\cabana.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18453560c4ec97e00e3-11265691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bfaf0a36a258c79dcbb64a3258cd4d4216cfc651' => 
+    '06124acb93816633c033959cc678ff0a4dbb9fe2' => 
     array (
-      0 => '.\\templates\\porcategoria.tpl',
-      1 => 1443649555,
+      0 => '.\\templates\\cabana.tpl',
+      1 => 1443602094,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8851560c4ce4c8bd03-19010370',
+  'nocache_hash' => '18453560c4ec97e00e3-11265691',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560c4ce4e55182_38656875',
   'variables' => 
   array (
-    'categorias' => 0,
-    'categoria' => 0,
     'cabanas' => 0,
     'cabana' => 0,
     'clave' => 0,
     'valor' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560c4ec9960064_77161357',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560c4ce4e55182_38656875')) {function content_560c4ce4e55182_38656875($_smarty_tpl) {?><div class="fondo">
+<?php if ($_valid && !is_callable('content_560c4ec9960064_77161357')) {function content_560c4ec9960064_77161357($_smarty_tpl) {?><div class="fondo">
     <div class="container">        
         <div class="row">
             <div class="box">
-
+                <div class="col-lg-12">
                        <div class="row">
-
-                            <div class="btn-group" >
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Categorías <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" >
-                                    <?php  $_smarty_tpl->tpl_vars['categoria'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['categoria']->_loop = false;
- $_smarty_tpl->tpl_vars['id_categ'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['categorias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->key => $_smarty_tpl->tpl_vars['categoria']->value){
-$_smarty_tpl->tpl_vars['categoria']->_loop = true;
- $_smarty_tpl->tpl_vars['id_categ']->value = $_smarty_tpl->tpl_vars['categoria']->key;
-?>
-                                        <li>
-                                        <a href="index.php?action=CATEGORIA&idCat=<?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value['ID_CATEGORIA']);?>
-"><?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value['NOMBRE']);?>
-</a></li>
-                                        
-                                    <?php } ?>
-                                </ul>
-                            </div>
 
                             <div class="box"  style="text-align: center">
                                 <div class="col-lg-12">
@@ -64,7 +41,7 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
                                 </div>
 
                                 
-                               <!--  <?php  $_smarty_tpl->tpl_vars['cabana'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cabana']->_loop = false;
+                            <!--<?php  $_smarty_tpl->tpl_vars['cabana'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cabana']->_loop = false;
  $_smarty_tpl->tpl_vars['id_cabana'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['cabanas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['cabana']->key => $_smarty_tpl->tpl_vars['cabana']->value){
@@ -72,17 +49,17 @@ $_smarty_tpl->tpl_vars['cabana']->_loop = true;
  $_smarty_tpl->tpl_vars['id_cabana']->value = $_smarty_tpl->tpl_vars['cabana']->key;
 ?>
                                 
-                                <div class="col-lg-12 text-center">  
-                                        <div class="row">
-                                            <div class="col-md-3"></div>
-                                            <div class="col-md-6">                  
-                                                <img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
+                                <div class="col-lg-12 text-center">   
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">                  
+                                        <img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
 " alt="">
-                                                <h2><?php echo utf8_encode($_smarty_tpl->tpl_vars['cabana']->value['NOMBRE']);?>
-
-                                            </div>
-                                            <div class="col-md-3"></div>
                                         </div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                                    <h2><?php echo utf8_encode($_smarty_tpl->tpl_vars['cabana']->value['NOMBRE']);?>
+
                                         <br>
                                         <small><h5>Capacidad: <?php echo $_smarty_tpl->tpl_vars['cabana']->value['CAPACIDAD'];?>
 </h5></small>
@@ -97,8 +74,12 @@ $_smarty_tpl->tpl_vars['cabana']->_loop = true;
 
                                     <hr>
                                 </div>
-                                <?php } ?> -->
-                                
+                                <?php } ?>
+                                 -->
+
+ 
+
+
                                 <!-- Lista de cabañas-->
 
                                 <?php  $_smarty_tpl->tpl_vars['cabana'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cabana']->_loop = false;
@@ -119,15 +100,15 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
                                     <?php if ($_smarty_tpl->tpl_vars['clave']->value=='URL_IMG'){?>
                                         <div class="row">
                                             <div class="col-md-3"></div>
-                                            <div class="col-md-6 ">
-                                            <div id="slideshow">
-                                                <li class="img-responsive img-border img-full "><img class="img-responsive img-border img-full " src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
+                                            <div class="col-md-6">
+                                                <li style="text-align: center" class="img-responsive img-border img-full"><img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
 " alt=""></li>
-                                                </div></div>
+                                            </div>
                                             <div class="col-md-3"></div>
                                         </div>
                                     <?php }elseif($_smarty_tpl->tpl_vars['clave']->value=='DETALLE'){?>
-                                        <p><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
+                                        <p><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['clave']->value);?>
+: <?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
 </li><p><hr>
                                     <?php }elseif(($_smarty_tpl->tpl_vars['clave']->value=='ID_CABANA')||($_smarty_tpl->tpl_vars['clave']->value=='ID_CATEGORIA')){?><li></li>
                                     <?php }elseif(($_smarty_tpl->tpl_vars['clave']->value=='NOMBRE')){?>
@@ -136,22 +117,24 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
                                     <?php }else{ ?>
                                         <small><h5><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['clave']->value);?>
 : <?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
-</li><small><h5>
+</li></small></h5>
                                     <?php }?>
 
                                   <?php } ?>
                                 </ul>
-                                 <hr>
+                                <hr>
                                 <br>
-
                                 <?php } ?>
 
+                            
                         </div>
                     </div>
-
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+
+
 <?php }} ?>

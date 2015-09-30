@@ -25,7 +25,8 @@ class cabanaController{
 		// var_dump($arrCat);
 		$view->set_categoria($arrCat,$arrCab);
 		// $view->set_cabanas($arrCab);
-		$view->rendercabanaSegunCategoria();
+		$view->rendercabanaSegunCategoriaalter();
+		// $view->rendercabanaSegunCategoria();
 
 	}
 

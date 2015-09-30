@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 23:46:03
-         compiled from ".\templates\porcategoria.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8851560c4ce4c8bd03-19010370%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 23:45:25
+         compiled from ".\templates\porcategoriaalter.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:689560c56ced89639-31955035%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bfaf0a36a258c79dcbb64a3258cd4d4216cfc651' => 
+    '09a6e0cbc97764dd674d069c39f649ad3dd30345' => 
     array (
-      0 => '.\\templates\\porcategoria.tpl',
-      1 => 1443649555,
+      0 => '.\\templates\\porcategoriaalter.tpl',
+      1 => 1443649522,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8851560c4ce4c8bd03-19010370',
+  'nocache_hash' => '689560c56ced89639-31955035',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560c4ce4e55182_38656875',
+  'unifunc' => 'content_560c56ceee1830_19156782',
   'variables' => 
   array (
     'categorias' => 0,
@@ -28,7 +28,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560c4ce4e55182_38656875')) {function content_560c4ce4e55182_38656875($_smarty_tpl) {?><div class="fondo">
+<?php if ($_valid && !is_callable('content_560c56ceee1830_19156782')) {function content_560c56ceee1830_19156782($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+
+
+
+
+<div class="fondo">
     <div class="container">        
         <div class="row">
             <div class="box">
@@ -120,12 +128,16 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
                                         <div class="row">
                                             <div class="col-md-3"></div>
                                             <div class="col-md-6 ">
-                                            <div id="slideshow">
+
+
+
+<div id="slideshow">
                                                 <li class="img-responsive img-border img-full "><img class="img-responsive img-border img-full " src="<?php echo $_smarty_tpl->tpl_vars['cabana']->value['URL_IMG'];?>
 " alt=""></li>
-                                                </div></div>
+                                                </div>
                                             <div class="col-md-3"></div>
-                                        </div>
+                                        </div></div>
+
                                     <?php }elseif($_smarty_tpl->tpl_vars['clave']->value=='DETALLE'){?>
                                         <p><li ><?php echo utf8_encode($_smarty_tpl->tpl_vars['valor']->value);?>
 </li><p><hr>
@@ -154,4 +166,9 @@ $_smarty_tpl->tpl_vars['valor']->_loop = true;
 
     </div>
 </div>
+
+
+
+
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('pagina'=>'indexAjax'), 0);?>
 <?php }} ?>

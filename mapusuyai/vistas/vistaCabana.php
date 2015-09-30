@@ -18,6 +18,10 @@ class cabanaView extends View{
 		$this->smarty->display('porcategoria.tpl');
 	}
 
+	function rendercabanaSegunCategoriaalter(){
+		$this->smarty->display('porcategoriaalter.tpl');
+	}
+
 	function set_cabanas($arrCab){
 		
 		$this->smarty->assign("cabanas",$arrCab);

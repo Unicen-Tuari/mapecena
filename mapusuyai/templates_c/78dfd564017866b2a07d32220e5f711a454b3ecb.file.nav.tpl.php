@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:02:13
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 23:20:28
          compiled from ".\templates\nav.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12717560c3fc5e52ba1-83472488%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9418560c4c721759c3-18699404%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1443638406,
+      1 => 1443648025,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12717560c3fc5e52ba1-83472488',
+  'nocache_hash' => '9418560c4c721759c3-18699404',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560c3fc5e557c2_50658310',
+  'unifunc' => 'content_560c4c72179d23_20145645',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560c3fc5e557c2_50658310')) {function content_560c3fc5e557c2_50658310($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_560c4c72179d23_20145645')) {function content_560c4c72179d23_20145645($_smarty_tpl) {?>
 <div class="wrap">
   <div class="header">
       <div class="container">
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <ul class="nav navbar-nav navbar-right">
 
             <li><a id="indexAjax" href=""  data-hover="INICIO">INICIO</a></li>
-            <!-- <li ><a id="CABANAS" href="#" data-hover="CABANAS" >CABAÑAS</a></li> -->
+           <!--  <li ><a id="CABANAS" href="#" data-hover="CABANAS" >CABAÑAS</a></li> -->
             <li><a id="CATEGORIA" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
             <li><a id="GALERIA" href="#" data-hover="GALERIA">GALERIA</a></li>
             <li><a id="TARIFAS" href="#" data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>

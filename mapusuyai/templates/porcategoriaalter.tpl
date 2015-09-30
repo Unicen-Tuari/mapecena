@@ -1,3 +1,9 @@
+{include file="header.tpl" title=foo}
+{include file="nav.tpl" }
+
+
+
+
 <div class="fondo">
     <div class="container">        
         <div class="row">
@@ -58,11 +64,15 @@
                                         <div class="row">
                                             <div class="col-md-3"></div>
                                             <div class="col-md-6 ">
-                                            <div id="slideshow">
+
+
+
+<div id="slideshow">
                                                 <li class="img-responsive img-border img-full "><img class="img-responsive img-border img-full " src="{$cabana['URL_IMG']}" alt=""></li>
-                                                </div></div>
+                                                </div>
                                             <div class="col-md-3"></div>
-                                        </div>
+                                        </div></div>
+
                                     {elseif $clave eq 'DETALLE' }
                                         <p><li >{utf8_encode($valor)}</li><p><hr>
                                     {elseif ($clave eq 'ID_CABANA') or ($clave eq 'ID_CATEGORIA') }<li></li>
@@ -87,3 +97,8 @@
 
     </div>
 </div>
+
+
+
+
+{include file="footer.tpl" pagina=indexAjax}

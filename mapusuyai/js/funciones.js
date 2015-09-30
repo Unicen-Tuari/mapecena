@@ -1,41 +1,6 @@
-// You can also use "$(window).load(function() {"
+
 $(function () {
 
-	// $("#slider").responsiveSlides({
- //      auto: false,
- //      nav: false,
- //      speed: 500,
- //      namespace: "callbacks",
- //      pager: true,
- //    });
-	// // Slideshow 4
-	// $("#slider2").responsiveSlides({
-	// 	auto: true,
-	// 	pager: true,
-	// 	nav: false,
-	// 	speed: 500,
-	// 	namespace: "callbacks",
-	// 	before: function () {
-	// 		$('.events').append("<li>before event fired.</li>");
-	// 	},
-	// 	after: function () {
-	// 		$('.events').append("<li>after event fired.</li>");
-	// 	}
-	// });	
-
-		/*
-	var defaults = {
-		containerID: 'toTop', // fading element id
-		containerHoverID: 'toTopHover', // fading element hover id
-		scrollSpeed: 1200,
-		easingType: 'linear' 
-	};
-	*/
-
-	//si no esta definido lo defino
-	// if ($("#toTop").length==0){
-	// 	$().UItoTop({ easingType: 'easeOutQuart' });
-	// }
 
 	$("#bs-example-navbar-collapse-1 ul li").unbind();//para evitar multiples triggers
 	$("#bs-example-navbar-collapse-1 ul li").click(function(e){
@@ -75,16 +40,3 @@ $(function () {
 addEventListener("load", function() {
 	setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); 
 };
-
-
-
-
-        //     <!-- script-for-nav -->
-        //   <!--<script>
-        //     $( "span.menu" ).click(function() {
-        //       $( ".head-nav ul" ).slideToggle(300, function() {
-        //       // Animation complete.
-        //       });
-        //     });
-        //   </script>-->
-        // <!-- script-for-nav -->  

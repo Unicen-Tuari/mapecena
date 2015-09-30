@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:02:13
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 22:56:18
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3780560c3fc5e33c63-83588489%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6197560c4c72151385-35857082%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3780560c3fc5e33c63-83588489',
+  'nocache_hash' => '6197560c4c72151385-35857082',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560c3fc5e3ad68_77747025',
+  'unifunc' => 'content_560c4c7215c8d1_22885455',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560c3fc5e3ad68_77747025')) {function content_560c3fc5e3ad68_77747025($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_560c4c7215c8d1_22885455')) {function content_560c4c7215c8d1_22885455($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
 <title>Cabañas Mapu Suyai</title>
