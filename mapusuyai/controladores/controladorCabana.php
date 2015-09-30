@@ -6,24 +6,34 @@ include_once "./modelos/modeloCabana.php";
 class cabanaController{
 	
 	public function actioncabana(){
-		$cabnamod = new cabanaModel;
+		$cabMod = new cabanaModel;
 		$view = new CabanaView;
-
-		$arrCab = $cabnamod->todasLasCabanas();
-		var_dump($arrCab);
-		
+		$arrCab = $cabMod->todasLasCabanas();
 		$view->set_cabanas($arrCab);
 		$view->rendercabana();
 
 	}
 
 	public function actioncabanaseguncategoria($categoria){
-		$cabnamod = new cabanaModel;
+		$cabMod = new cabanaModel;
 		$view = new CabanaView;
-
-		$arrCab = $cabnamod->todasLasCabanasSegunCategoria($categoria);
+		$categMod = new cabanaModel;
+		$arrCat = $categMod->todasCategorias();
+		$arrCab = $cabMod->todasLasCabanasSegunCategoria($categoria);
 		var_dump($arrCab);
-		
+		$view->set_categoria($arrCat);
+		$view->set_cabanas($arrCab);
+		$view->rendercabanaSegunCategoria();
+
+	}
+
+	public function actioncabanasincategoria(){
+		$cabMod = new cabanaModel;
+		$view = new CabanaView;
+		$categMod = new cabanaModel;
+		$arrCat = $categMod->todasCategorias();
+		$arrCab = $cabMod->todasLasCabanas();
+		$view->set_categoria($arrCat);
 		$view->set_cabanas($arrCab);
 		$view->rendercabanaSegunCategoria();
 
@@ -33,6 +43,8 @@ class cabanaController{
 		$view = new CabanaView;
 		$view->renderTarifas();
 	}
-}
 
+
+
+}
 ?>

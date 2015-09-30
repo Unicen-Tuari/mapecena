@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 00:02:43
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 07:15:28
          compiled from ".\templates\contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5452560af6610207b3-51880368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '466dcc33a567cd1e7c81f5bde835247db88df2dd' => 
     array (
       0 => '.\\templates\\contacto.tpl',
-      1 => 1443563772,
+      1 => 1443589004,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_560af6610cfe35_56463958')) {function content_560af6610cfe35_56463958($_smarty_tpl) {?><div class="main">
 		<div class="container">
 		<div class="contact-data">
-			<h4>Get In Touch</h4>
+			<h4>Contactanos</h4>
 		          <div class="contact-form">
 					     <form method="post" action="contact-post.html" class="left_form">
 					    	<div>
-						    	<span><label>NAME</label></span>
+						    	<span><label>Nombre</label></span>
 						    	<span><input name="userName" type="text" class="textbox"></span>
 						    </div>
 						    <div>
@@ -36,35 +36,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					    </form>
 					    <form class="right_form">
 					        <div>					    	
-						    	<span><label>SUBJECT</label></span>
+						    	<span><label>Comentario</label></span>
 						    	<span><textarea name="userMsg"> </textarea></span>
 						    </div>
 						   <div>
-						   		<span><input type="submit" value="Submit" class="myButton"></span>
+						   		<span><input type="submit" value="Enviar" class="myButton"></span>
 						  </div>
 					    </form>
 					    <div class="clear"></div>
 				  </div>
 				  <div class="content_bottom">
 				 	<div class="company_address">
-				     	<h4>Location</h4>
-						    	<p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <span><a href="mailto:info@mycompany.com">info(at)mycompany.com</a></span></p>
-				   		<p>Follow on: <span><a href="#">Facebook</a></span>, <span><a href="#">Twitter</a></span></p>
+				     	<h4>Direccion:</h4>
+						    	<p>Pietri 1402</p>
+						   		<p>Tandil, Prov. Buenos Aires</p>
+						   		<p>Argentina</p>
+				   		<p>Teléfono:(+54) 0249 154123467</p>
+				 	 	<p>Email: <span><a href="mailto:info@MapuSuyai.com">info@MapuSuyai.com</a></span></p>
+				   		<p>Seguinos en : <span><a href="https://www.facebook.com/Caba%C3%B1as-Mapu-Suyai-365713570162924/">Facebook</a></span>, <span><a href="Twitter.com">Twitter</a></span></p>
 				     </div>
 				       <div class="contact_info">
-    	 				<h4>Find Us Here</h4>
+    	 				<h4>Ubicación</h4>
 					    	  <div class="map">
-							   	    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#999;text-align:left;font-size:13px">View Larger Map</a></small>
+
+							   	   <iframe frameborder="0" scrolling="no" marginheight="5" marginwidth="0"width="600" height="300" src="https://maps.google.com/maps?hl=en&q=pietri 2000, Tandil, argentina&ie=UTF8&t=m&z=15&iwloc=B&output=embed"></iframe>
+
+
 							  </div>
       				     </div>
 				      <div class="clearfix"></div>
 	                </div>
-					   </div>
+				</div>
 		</div>
 	</div>
 	<?php }} ?>

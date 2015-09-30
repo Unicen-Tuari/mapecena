@@ -15,12 +15,17 @@ class cabanaView extends View{
 	}
 
 	function rendercabanaSegunCategoria(){
-		$this->smarty->display('cabana.tpl');// ver si usar el mismo o usar segun categoria
+		$this->smarty->display('porcategoria.tpl');
 	}
 
 	function set_cabanas($arrCab){
-		var_dump($arrCab);
+		
 		$this->smarty->assign("cabanas",$arrCab);
+	}
+
+	function set_categoria($arrCat){
+		$this->smarty->assign("categorias",$arrCat);
+		
 	}
 }
 

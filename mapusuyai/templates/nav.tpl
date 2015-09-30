@@ -9,8 +9,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="index.php?action=INDEX"  data-hover="INICIO">INICIO</a></li> -->
-            <li><a id="indexAjax" href="#"  data-hover="INICIO">INICIO</a></li>
-            <li><a id="CABANAS" href="#" data-hover="CABANAS">CABAÑAS</a></li>
+            <li><a id="indexAjax" href=""  data-hover="INICIO">INICIO</a></li>
+            <!-- <li ><a id="CABANAS" href="#" data-hover="CABANAS" >CABAÑAS</a></li> -->
+            <li><a id="CATEGORIA" href="#" data-hover="CABAÑAS">CABAÑAS</a></li>
             <li><a id="GALERIA" href="#" data-hover="GALERIA">GALERIA</a></li>
             <li><a id="TARIFAS" href="#" data-hover="PROMOCIONES y TARIFAS">PROMOCIONES y TARIFAS</a></li>
             <li><a id="CONTACTO" href="#"  data-hover="CONTACTO">CONTACTO</a></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Wolshino  A Hotel Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>Cabañas Mapu Suyai</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,7 @@
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<!--
 <script>
     $(document).ready(function() {
     $('.popup-with-zoom-anim').magnificPopup({
@@ -38,10 +39,15 @@
     mainClass: 'my-mfp-zoom-in'
     });
     });
-  </script>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+  </script>-->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/jscript" src="./js/galeria.js"></script>
     <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="./css/w3.css" type="text/css" media="all">  
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 <body>

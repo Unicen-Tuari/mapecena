@@ -2,14 +2,6 @@
 
 class IndexController{
 	
-	// public function actionIndex(){
-	// 	include "./vistas/vistaInicio.php";
-	// 	$view = new IndexView;
-	// 	$view->render();
-	// }
-	
-
-
 	public function actionIndex(){
 		include "./vistas/vistaInicio.php";
 		$view = new IndexView;
@@ -23,11 +15,6 @@ class IndexController{
 
 	
 	}
-	
-
-	
-	
-	
 	
 }
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 05:48:30
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 08:57:29
          compiled from ".\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2863356082609668d26-39522088%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1443498508,
+      1 => 1443596239,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<ul>
 						<li><a href="#"><i class="pho"> </i></a></li>
 						<li><a href="#"><i class="twiter"> </i></a></li>
-						<li><a href="#"><i class="facebok"> </i></a></li>
+						<li><a href="https://www.facebook.com/Caba%C3%B1as-Mapu-Suyai-365713570162924/"><i class="facebok"> </i></a></li>
 							<div class="clearfix"></div>	
 					</ul>
 				</div>
@@ -50,13 +50,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	
 	<script type="text/javascript" src="./js/funciones.js"></script>
 	<script type="text/javascript">
-//cuando la pagina esta lista
-$(function () {
-	$("#<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+		//cuando la pagina esta lista
+		$(function () {
+			$("#<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
 ").parent().click();//hago click en el boton pasado por parametro
-});
-
-</script>
+		});
+	</script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    
 <!-- footer -->
 </body>
 </html><?php }} ?>

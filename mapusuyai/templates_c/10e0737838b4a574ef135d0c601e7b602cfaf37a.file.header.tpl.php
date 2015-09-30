@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-29 20:08:44
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 10:28:03
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13603560826095e0041-99772229%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1443549518,
+      1 => 1443601677,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_560826095eff18_00643104')) {function content_560826095eff18_00643104($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
 <head>
-<title>Wolshino  A Hotel Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>Cabañas Mapu Suyai</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,6 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="js/jquery.min.js"></script>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<!--
 <script>
     $(document).ready(function() {
     $('.popup-with-zoom-anim').magnificPopup({
@@ -59,10 +60,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     mainClass: 'my-mfp-zoom-in'
     });
     });
-  </script>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+  </script>-->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/jscript" src="./js/galeria.js"></script>
     <link href="./css/galeria.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="./css/w3.css" type="text/css" media="all">  
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 <body><?php }} ?>
