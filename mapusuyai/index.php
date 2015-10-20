@@ -54,6 +54,7 @@ if(! array_key_exists('action', $_REQUEST)||($_REQUEST['action']=='index'))
   }
   else 
     {
+      // trigger_error(error_msg);buscarlo bien
       echo "ERROR ACCION NO VALIDA";
     }
 
