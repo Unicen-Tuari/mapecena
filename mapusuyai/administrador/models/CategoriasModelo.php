@@ -8,8 +8,6 @@ class Categorias extends ModeloDB
 	function __construct() {
 		
 	}
-
-	public function load(){}
 	
 	
 	public function load_Categorias() 

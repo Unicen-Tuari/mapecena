@@ -9,14 +9,10 @@ class AdminController{
 	
 	function __construct(){
 
-		$this->model = new Novedades();
+		$this->model = new Cabanas();
 		$this->view = new AdminView();
 	}
 
-	public function actionIndex(){
-		$catModel = new Categorias();
-		$this->view->render($this->model->load_NovedadesAdmin(), $catModel->load_Categorias());		
-	}
 
 	function mostrarHome(){
 		$catModel = new Categorias();
@@ -34,7 +30,7 @@ class AdminController{
 	}
 	  
 	function agregarCabana(){	  	 
-		
+		//no deberia controlar nada de esto ya que esta controlado desde el Formulario
 		if(isset($_REQUEST['titulo']) 
 			//&& isset($_REQUEST['contenido']) 
 			 //&& isset($_REQUEST['id_categoria']) 
@@ -48,15 +44,7 @@ class AdminController{
 	    $this->mostrarHomeParcial();	      
 	}
 
-	// function borrarNovedad(){
 
-	//     if(isset($_REQUEST['id_task'])){
-
-	//       $this->model->borrarNovedad($_REQUEST['id_task']);
-	//     }
-
-	//     $this->mostrarBorrar();
-	// }
 
 	function agregarImagenes(){
 

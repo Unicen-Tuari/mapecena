@@ -8,8 +8,8 @@
     <div class="container">
 
       <div class="page-header text-center">
-        <h1>Listado</h1>
-      </div><br>
+        <h1>Listado de Caba&ntilde;as</h1>
+      </div>
 
       <div class="row" id="noticias">
         {include file="cabanas.tpl" }
@@ -46,7 +46,7 @@
             </div>
             <div class="form-group id="imagenes" ">
               <label for="imagesToUpload">Im&aacute;gen</label>
-              <input type="file" name="imagesToUpload[]" id="imagesToUpload" />
+              <input type="file" name="imagesToUpload[]" id="imagesToUpload" required/>
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Agregar</button>

@@ -2,7 +2,7 @@
 
 include_once "modelodb.php";
 
-class Novedades extends ModeloDB
+class Cabanas extends ModeloDB
 {
 
 	private $cabanas; 
@@ -12,11 +12,7 @@ class Novedades extends ModeloDB
 	      $this->db = new PDO('mysql:host=localhost;dbname=mapusuyai;charset=utf8', 'root', '');
 	      $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	  }
-	public function load()	
-	{			
-
-	}
-
+	
 
 	public function load_Cabanas($categoria) 
 	{			
